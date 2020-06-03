@@ -11,7 +11,7 @@ class MultiViewVocab(Dataset):
   def __init__(self, lexicon, subwords, counts=None, min_count=0):
     super(MultiViewVocab, self).__init__()
 
-    with open(lexicon, "r") as f:
+    with open(lexicon, "r") as f: # by default subwords = 'phones' from train/eval_config.json
       lexicon = json.load(f)
       w2i = lexicon["words_to_ids"]
       # Note: add 1 since padding_idx=0

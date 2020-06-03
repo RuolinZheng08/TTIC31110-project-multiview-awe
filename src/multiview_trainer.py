@@ -10,7 +10,7 @@ def train(config):
   vocab_sampler = load("vocab_sampler", config, examples=vocab.examples)
   vocab.init_data_loader(vocab_sampler)
 
-  train_data = load("train_data", config, vocab=vocab)
+  train_data = load("train_data", config, vocab=vocab) # class multiview_dataset.MultiViewDataset_IndividualWords
   train_sampler = load("train_sampler", config, examples=train_data.examples)
   train_data.init_data_loader(train_sampler)
 
@@ -31,6 +31,17 @@ def train(config):
   net = load("net", config, loss_fn=loss_fn,
              view1_input_size=train_data.input_feat_dim,
              view2_num_embeddings=train_data.input_num_subwords)
+#   MultiViewRNN(
+#   (net): ModuleDict(
+#     (view1): RNN_default(
+#       (rnn): GRU(108, 512, num_layers=6, batch_first=True, dropout=0.4, bidirectional=True)
+#     )
+#     (view2): RNN_default(
+#       (emb): Embedding(46, 64, padding_idx=0)
+#       (rnn): GRU(64, 512, num_layers=2, batch_first=True, dropout=0.4, bidirectional=True)
+#     )
+#   )
+#   )
   net.cuda()
 
   optim = load("optim", config, params=net.parameters())
@@ -50,7 +61,6 @@ def train(config):
              f"start_iter={train_data.iter}")
 
     for i, batch in enumerate(train_data, train_data.iter):
-
       net.train()
       optim.zero_grad()
       net.train_step(batch, batch_iter=i)

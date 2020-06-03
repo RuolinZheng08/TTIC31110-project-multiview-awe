@@ -20,7 +20,7 @@ class MultiViewTripletLoss:
     self.extra = extra
     self.average = average
 
-  def get_sims(self, x, y, inv, y_extra=None):
+  def get_sims(self, x, y, inv, y_extra=None): # get_similarity
 
     n, d = x.shape
     m = y.shape[0]
@@ -60,7 +60,7 @@ class MultiViewTripletLoss:
 
   def get_topk(self, x, k, dim=0):
 
-    return x.topk(min(k, x.shape[dim]), dim=dim)[0]
+    return x.topk(min(k, x.shape[dim]), dim=dim)[0] # torch fn that gets k biggest elts or something like that
 
   def __call__(self, x, y, inv, y_extra=None):
 
@@ -76,6 +76,11 @@ class MultiViewTripletLoss:
 
     word_diff = self.get_word_sims(y, y_extra=y_extra)
 
+    # NOTE: dis(a,b) = 1-cosine_similarity (see torch doc at https://pytorch.org/docs/master/nn.functional.html#torch.nn.functional.cosine_similarity)
+    # Therefore, to add same (the dis(a,b) that's same across all objs),
+    # it's equivalent to subtract that cosine_sim term.
+    # The 1 in front cancels out with the diff dis term.
+
     # Most offending words per utt
     diff_k = self.get_topk(diff, k=k, dim=1)
     obj0 = F.relu(self.margin + diff_k - same)
@@ -90,6 +95,6 @@ class MultiViewTripletLoss:
       utt_diff_k[i] = self.get_topk(diff.view(-1)[perms == i], k=k)
     obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
-    loss = (obj0 + obj1 + obj2).mean(1)
+    loss = (obj0 + obj1 + obj2).mean(1) # 1 is just the dim
 
     return loss.mean() if self.average else loss.sum()

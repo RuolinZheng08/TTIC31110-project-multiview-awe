@@ -159,7 +159,7 @@ class MultiViewDataset_IndividualWords(SpeechDataset):
     num_ignored = 0
     examples = {}
     for uid, g in align.items():
-      words = g["words"][:]
+      words = g["words"][:] # list of word(s)
       durs = g["ends"][:] - g["starts"][:] + 1
       for i, (w, d) in enumerate(zip(words, durs)):
         if d < min_seg_dur or (max_seg_dur is not None and d > max_seg_dur):
