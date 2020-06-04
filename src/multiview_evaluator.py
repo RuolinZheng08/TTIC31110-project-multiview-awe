@@ -3,6 +3,7 @@ import logging as log
 from utils.loader import load
 from saver.saver import savez
 
+import torch
 
 def evaluate(config):
 
@@ -23,7 +24,8 @@ def evaluate(config):
   net = load("net", config,
              view1_input_size=dev_data.input_feat_dim,
              view2_num_embeddings=dev_data.input_num_subwords)
-  net.cuda()
+  device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+  net.to(device)
   net.load(tag=config.global_step)
 
   log.info("Evaluating best model on dev and test:")

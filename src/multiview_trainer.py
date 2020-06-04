@@ -3,6 +3,7 @@ import logging as log
 from utils.loader import load
 from saver.saver import save_many, save_config, savez
 
+import torch
 
 def train(config):
 
@@ -42,7 +43,8 @@ def train(config):
 #     )
 #   )
 #   )
-  net.cuda()
+  device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+  net.to(device)
 
   optim = load("optim", config, params=net.parameters())
   sched = load("sched", config, optim=optim, net=net, eval_fn=eval_fn)
