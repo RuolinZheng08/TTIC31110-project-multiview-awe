@@ -4,6 +4,7 @@ from utils.loader import load
 from saver.saver import save_many, save_config, savez
 
 import torch
+import scipy.special
 
 def train(config):
 
@@ -11,6 +12,11 @@ def train(config):
   vocab_sampler = load("vocab_sampler", config, examples=vocab.examples)
   vocab.init_data_loader(vocab_sampler)
   # TODO: load the edit distance matrix/tensor defined on this vocab
+  # fake construction
+  # dim = scipy.special.comb(len(vocab.examples), 2, exact=True)
+  # editdist_matrix = torch.empty(dim, dim)
+  # editdist_matrix.fill_(1)
+  # print('Finished constructing mat')
 
   train_data = load("train_data", config, vocab=vocab) # class multiview_dataset.MultiViewDataset_IndividualWords
   train_sampler = load("train_sampler", config, examples=train_data.examples)
@@ -33,6 +39,10 @@ def train(config):
   net = load("net", config, loss_fn=loss_fn,
              view1_input_size=train_data.input_feat_dim,
              view2_num_embeddings=train_data.input_num_subwords)
+  # TODO
+  # log
+  net.loss_fn.i2w = vocab.i2w # for edit dist
+  net.loss_fn.w2s = vocab.w2s
   
 #   MultiViewRNN(
 #   (net): ModuleDict(
@@ -56,9 +66,6 @@ def train(config):
     net.load(tag=config.global_step)
     optim.load(tag=config.global_step)
     sched.load(tag=config.global_step)
-
-  # TODO:
-  # net.editdist_matrix = 
 
   while not optim.converged:
 

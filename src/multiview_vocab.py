@@ -14,9 +14,9 @@ class MultiViewVocab(Dataset):
     with open(lexicon, "r") as f: # by default subwords = 'phones' from train/eval_config.json
       lexicon = json.load(f)
       w2i = lexicon["words_to_ids"]
-      # Note: add 1 since padding_idx=0
+      # NOTE: add 1 since padding_idx=0
       s2i = {s: i + 1 for s, i in lexicon[f"{subwords}_to_ids"].items()}
-      # Note: use first pronunciation
+      # NOTE: use first pronunciation
       w2s = {w: s[0] for w, s in lexicon[f"word_to_{subwords}"].items()}
 
     num_removed = 0
@@ -36,9 +36,9 @@ class MultiViewVocab(Dataset):
 
     # word to index, index to word, seq to index, word to seq
     self.w2i = w2i
-    self.i2w = {i: w for w, i in w2i.items()}
     self.s2i = s2i
     self.w2s = w2s
+    self.i2w = {i: w for w, i in w2i.items()}
     self.examples = list(w2i)
 
   def __getitem__(self, word):

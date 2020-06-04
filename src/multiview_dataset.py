@@ -140,8 +140,6 @@ class MultiViewDataset_Isolated(MultiViewDataset):
     uids, ind, inv_ind = np.unique(
         ids, return_index=True, return_inverse=True)
 
-    for idx in inv_ind:
-      print(self.vocab.i2w[idx] + '\n')
     return {
       "view1": segs, "view1_lens": durs,
       "view2": view2[ind], "view2_lens": view2_lens[ind],
