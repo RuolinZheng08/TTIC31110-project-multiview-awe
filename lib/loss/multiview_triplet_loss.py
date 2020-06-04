@@ -95,19 +95,19 @@ class MultiViewTripletLoss:
       utt_diff_k[i] = self.get_topk(diff.view(-1)[perms == i], k=k)
     obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
-    # NOTE: this is modeled after obj1 but with x instead of y, so it might not be correct
-    audio_diff = self.get_word_sims(x, y_extra=y_extra)
-    audio_diff_k = self.get_topk(audio_diff, k=k, dim=1)
-    obj3 = F.relu(self.margin + audio_diff_k[inv] - same)
+    # # NOTE: this is modeled after obj1 but with x instead of y, so it might not be correct
+    # audio_diff = self.get_word_sims(x, y_extra=y_extra)
+    # audio_diff_k = self.get_topk(audio_diff, k=k, dim=1)
+    # obj3 = F.relu(self.margin + audio_diff_k[inv] - same)
 
     # TODO (cost-sensitive margins): obj0, obj1, obj2, obj3, obj0+2, obj1+3, obj0+1+2+3
     losses = {
       'obj0+2': (obj0 + obj2).mean(1), 
-      'obj1+3': (obj1 + obj3).mean(1), # unsure
-      'obj_all': (obj0 + obj1 + obj2 + obj3).mean(1) # unsure
+      # 'obj1+3': (obj1 + obj3).mean(1), # unsure
+      # 'obj_all': (obj0 + obj1 + obj2 + obj3).mean(1) # unsure
     }
 
     # loss = (obj0 + obj1 + obj2).mean(1) # 1 is just the dim -- this is default with margin=0.5
-    loss = losses['obj0+2']
+    loss = obj0.mean(1) #losses['obj0+2']
 
     return loss.mean() if self.average else loss.sum()

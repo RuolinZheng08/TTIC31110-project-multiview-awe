@@ -87,8 +87,13 @@ def train(config):
 
   log.info("dev score:")
   _, dev_out = eval_fn(net, dev_data)
-  savez("save/dev-embs", **dev_out)
+  savez(f"save/dev-embs-{config.optim_lr}-{config.net_view1_dropout}-{config.loss_margin}", **dev_out)
 
-  log.info("test score:")
-  _, test_out = eval_fn(net, test_data)
-  savez("save/test-embs", **test_out)
+  log.info(f"(This was for init_lr={config.optim_lr}, dropout={config.net_view1_dropout}, fixed_margin={config.loss_margin})")
+  with open(f"dev-embs-{config.optim_lr}-{config.net_view1_dropout}-{config.loss_margin}.txt", 'a') as out:
+    out.write(str(dev_out)+'\n')
+
+  # commented out for now for tuning purposes!
+  # log.info("test score:")
+  # _, test_out = eval_fn(net, test_data)
+  # savez("save/test-embs", **test_out)
