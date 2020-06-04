@@ -24,10 +24,16 @@ class MultiViewTripletLoss:
 
     n, d = x.shape
     m = y.shape[0]
+    print('n, d, m', n, d, m)
 
     same = F.cosine_similarity(x, y[inv]).unsqueeze(-1)
 
+    # shift y labels by one so now all x gets wrong labels
     perms = torch.cat([(inv + i) % m for i in range(1, m)])
+    print('y', y)
+    print('y[inv]', y[inv])
+    print('inv', inv)
+    print('perms', perms)
     diff = F.cosine_similarity(
         x.view(n, 1, d), y[perms].view(n, m - 1, d), dim=2)
 
@@ -59,8 +65,18 @@ class MultiViewTripletLoss:
     return word_diff
 
   def get_topk(self, x, k, dim=0):
+    # returns (top k values, indices)
+    return x.topk(min(k, x.shape[dim]), dim=dim)
 
-    return x.topk(min(k, x.shape[dim]), dim=dim)[0] # torch fn that gets k biggest elts or something like that
+  def get_edistdist_tensor(self, true_label_ind, false_label_ind):
+    # true_label_ind (batch_size, 1), false_label_ind (batch_size, k)
+    # returns a tensor the same dimension as false_label_ind, i.e. (batch_size, k)
+    editdist_tens = torch.zeros(false_label_ind.shape)
+    # TODO: optimize tensor look up
+    for true in true_label_ind:
+      for false in false_label_ind:
+        editdist_tens[true, false] = self.editdist_matrix[true, false]
+    return editdist_tens
 
   def __call__(self, x, y, inv, y_extra=None):
 
@@ -72,7 +88,7 @@ class MultiViewTripletLoss:
 
     k = min(self.k, m - 1)
 
-    same, diff, perms = self.get_sims(x, y, inv, y_extra=y_extra)
+    same, diff, perms = self.get_sims(x, y, inv, y_extra=y_extra) # same has dim (batch_size, 1)
 
     word_diff = self.get_word_sims(y, y_extra=y_extra)
 
@@ -82,17 +98,23 @@ class MultiViewTripletLoss:
     # The 1 in front cancels out with the diff dis term.
 
     # Most offending words per utt
-    diff_k = self.get_topk(diff, k=k, dim=1)
-    obj0 = F.relu(self.margin + diff_k - same)
+    diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)
+    # TODO:
+    if self.editdist_matrix is None:
+      margin = self.margin # fixed margin
+    else:
+      editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind)
+      margin = self.margin_max * torch.min(self.threshold_max, editdist_tensor) / self.threshold_max
+    obj0 = F.relu(margin + diff_k - same)
 
     # Most offending words per word
-    word_diff_k = self.get_topk(word_diff, k=k, dim=1)
+    word_diff_k, _ = self.get_topk(word_diff, k=k, dim=1)
     obj1 = F.relu(self.margin + word_diff_k[inv] - same)
 
     # Most offending utts per word
     utt_diff_k = torch.zeros(m, k, device=diff.device)
     for i in range(m):
-      utt_diff_k[i] = self.get_topk(diff.view(-1)[perms == i], k=k)
+      utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
     obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
     # NOTE: this is modeled after obj1 but with x instead of y, so it might not be correct

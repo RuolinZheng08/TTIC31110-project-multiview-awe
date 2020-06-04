@@ -58,6 +58,9 @@ class MultiViewRNN(nn.Module, Saver):
     if loss_fn is not None:
       self.loss_fn = loss_fn
 
+    # TODO: pass editdist_matrix into loss_fn
+    # self.loss_fn.editdist_matrix = self.editdist_matrix
+
   @property
   def output_size(self):
     if "proj" in self.net:
@@ -102,6 +105,8 @@ class MultiViewRNN(nn.Module, Saver):
 
     inv = batch.pop("inv")
     ids = batch.pop("ids")
+    print('inv', inv, inv.shape)
+    print('ids', ids, ids.shape)
     view1, view2 = self.forward(batch)
 
     loss = self.loss_fn(view1, view2, inv)

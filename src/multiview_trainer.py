@@ -7,9 +7,10 @@ import torch
 
 def train(config):
 
-  vocab = load("vocab_data", config)
+  vocab = load("vocab_data", config) # class multiview_vocab.MultiViewVocab
   vocab_sampler = load("vocab_sampler", config, examples=vocab.examples)
   vocab.init_data_loader(vocab_sampler)
+  # TODO: load the edit distance matrix/tensor defined on this vocab
 
   train_data = load("train_data", config, vocab=vocab) # class multiview_dataset.MultiViewDataset_IndividualWords
   train_sampler = load("train_sampler", config, examples=train_data.examples)
@@ -32,6 +33,7 @@ def train(config):
   net = load("net", config, loss_fn=loss_fn,
              view1_input_size=train_data.input_feat_dim,
              view2_num_embeddings=train_data.input_num_subwords)
+  
 #   MultiViewRNN(
 #   (net): ModuleDict(
 #     (view1): RNN_default(
@@ -54,6 +56,9 @@ def train(config):
     net.load(tag=config.global_step)
     optim.load(tag=config.global_step)
     sched.load(tag=config.global_step)
+
+  # TODO:
+  # net.editdist_matrix = 
 
   while not optim.converged:
 

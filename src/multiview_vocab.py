@@ -34,7 +34,7 @@ class MultiViewVocab(Dataset):
     for s, i in s2i.items():
       log.info(f"    {s}= {i}")
 
-
+    # word to index, index to word, seq to index, word to seq
     self.w2i = w2i
     self.i2w = {i: w for w, i in w2i.items()}
     self.s2i = s2i
