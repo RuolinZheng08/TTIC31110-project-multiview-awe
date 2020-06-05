@@ -29,8 +29,8 @@ def tuneHyperparamsAndSave(config, small_grid_search=True):
     #   'dropout' : [0.4],
     #   'loss_margin': [0.5]
     # }
-    hyperparams = { # 4 combos
-      'optim_lr' : [0.0001, 0.001],
+    hyperparams = { # 4 combos, lr 0.0001 is too slow!!!
+      'optim_lr' : [0.001, 0.0005],
       'dropout' : [0.4],
       'loss_margin': [0.4, 0.5]
     }
