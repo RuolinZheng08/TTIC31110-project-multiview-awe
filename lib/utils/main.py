@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 
 import logging as log
-log.basicConfig(level=log.INFO, format="%(asctime)s: %(message)s")
+import sys
+log_filename = 'log_file.txt'
+log.basicConfig(filename=log_filename, filemode='a', level=log.INFO, format="%(asctime)s: %(message)s")
+
+# https://stackoverflow.com/questions/13733552/logger-configuration-to-log-to-file-and-print-to-stdout
+logFormatter = log.Formatter("%(asctime)s: %(message)s")
+consoleHandler = log.StreamHandler(sys.stdout)
+consoleHandler.setFormatter(logFormatter)
+log.getLogger().addHandler(consoleHandler) # print to cmdline too
 
 import os
 import argparse
@@ -42,7 +50,7 @@ def tuneHyperparamsAndSave(config, small_grid_search=True):
       config.net_view1_dropout = dropout
       config.net_view2_dropout = dropout
       config.loss_margin = margin
-      
+
       log.info(f"Hyperparam tuning-------------------")
       log.info(f"optim_lr: {config.optim_lr}")
       log.info(f"dropout (for both): {config.net_view1_dropout}")
@@ -70,6 +78,7 @@ args = parser.parse_args()
 
 config_file = args.config_file
 
+log.info('\n\nStart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
 log.info(f"Using {world_size} GPU(s)")
 log.info(f"Machine: {rank} / {world_size}")
 
