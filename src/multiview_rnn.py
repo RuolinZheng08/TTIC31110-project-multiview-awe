@@ -102,6 +102,7 @@ class MultiViewRNN(nn.Module, Saver):
 
     inv = batch.pop("inv")
     ids = batch.pop("ids")
+    
     view1, view2 = self.forward(batch)
 
     loss = self.loss_fn(view1, view2, inv)

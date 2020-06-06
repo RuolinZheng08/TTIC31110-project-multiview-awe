@@ -49,7 +49,7 @@ def single_view(x, y):
 
   indices = dists.argsort()
   del dists
-  print(y)
+  # print(y)
   pairs = np.zeros(n * (n - 1) // 2, dtype=np.bool)
   i = 0
   for j in range(n):

@@ -3,6 +3,7 @@ import logging as log
 import torch
 import torch.nn.functional as F
 
+import editdistance
 
 class MultiViewTripletLoss:
 
@@ -19,15 +20,19 @@ class MultiViewTripletLoss:
     self.min_k = min_k or k
     self.extra = extra
     self.average = average
+    self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    self.editdist_cache = {}
 
   def get_sims(self, x, y, inv, y_extra=None): # get_similarity
 
     n, d = x.shape
     m = y.shape[0]
-
+    
     same = F.cosine_similarity(x, y[inv]).unsqueeze(-1)
 
+    # shift y labels by one so now all x gets wrong labels
     perms = torch.cat([(inv + i) % m for i in range(1, m)])
+  
     diff = F.cosine_similarity(
         x.view(n, 1, d), y[perms].view(n, m - 1, d), dim=2)
 
@@ -59,8 +64,29 @@ class MultiViewTripletLoss:
     return word_diff
 
   def get_topk(self, x, k, dim=0):
+    # returns (top k values, indices)
+    return x.topk(min(k, x.shape[dim]), dim=dim)
 
-    return x.topk(min(k, x.shape[dim]), dim=dim)[0] # torch fn that gets k biggest elts or something like that
+  def get_editdist_tensor(self, true_label_ind, false_label_ind):
+    # true_label_ind (batch_size, 1), false_label_ind (batch_size, k)
+    # returns a tensor the same dimension as false_label_ind, i.e. (batch_size, k)
+    # TODO: optimize tensor look up and check if it's correct
+      editdist_tens = torch.empty(false_label_ind.shape, device=self.device)
+      for true, i_true in enumerate(true_label_ind):
+        seq_true = self.w2s[self.i2w[i_true.item()]]
+        for k_false in false_label_ind:
+          for false, i_false in enumerate(k_false):
+            seq_false = self.w2s[self.i2w[i_false.item()]]
+
+            key = tuple(sorted([i_true, i_false]))
+            if not key in self.editdist_cache:
+              dist = editdistance.eval(seq_true, seq_false)
+              self.editdist_cache[key] = dist
+            else:
+              dist = self.editdist_cache[key]
+            
+            editdist_tens[true, false] = dist
+      return editdist_tens
 
   def __call__(self, x, y, inv, y_extra=None):
 
@@ -72,7 +98,7 @@ class MultiViewTripletLoss:
 
     k = min(self.k, m - 1)
 
-    same, diff, perms = self.get_sims(x, y, inv, y_extra=y_extra)
+    same, diff, perms = self.get_sims(x, y, inv, y_extra=y_extra) # same has dim (batch_size, 1)
 
     word_diff = self.get_word_sims(y, y_extra=y_extra)
 
@@ -81,33 +107,28 @@ class MultiViewTripletLoss:
     # it's equivalent to subtract that cosine_sim term.
     # The 1 in front cancels out with the diff dis term.
 
+    # TODO: tune hyperparams
+    self.margin_max = 0.5
+    self.threshold_max = 9
+
     # Most offending words per utt
-    diff_k = self.get_topk(diff, k=k, dim=1)
-    obj0 = F.relu(self.margin + diff_k - same)
+    diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)
+    editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind)
+    margin = self.margin_max * torch.clamp(editdist_tensor, min=self.threshold_max) / self.threshold_max
+    del editdist_tensor
+    obj0 = F.relu(margin + diff_k - same)
 
     # Most offending words per word
-    word_diff_k = self.get_topk(word_diff, k=k, dim=1)
+    word_diff_k, _ = self.get_topk(word_diff, k=k, dim=1)
     obj1 = F.relu(self.margin + word_diff_k[inv] - same)
 
     # Most offending utts per word
     utt_diff_k = torch.zeros(m, k, device=diff.device)
     for i in range(m):
-      utt_diff_k[i] = self.get_topk(diff.view(-1)[perms == i], k=k)
+      utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
     obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
-    # # NOTE: this is modeled after obj1 but with x instead of y, so it might not be correct
-    # audio_diff = self.get_word_sims(x, y_extra=y_extra)
-    # audio_diff_k = self.get_topk(audio_diff, k=k, dim=1)
-    # obj3 = F.relu(self.margin + audio_diff_k[inv] - same)
-
-    # TODO (cost-sensitive margins): obj0, obj1, obj2, obj3, obj0+2, obj1+3, obj0+1+2+3
-    losses = {
-      'obj0+2': (obj0 + obj2).mean(1), 
-      # 'obj1+3': (obj1 + obj3).mean(1), # unsure
-      # 'obj_all': (obj0 + obj1 + obj2 + obj3).mean(1) # unsure
-    }
-
-    # loss = (obj0 + obj1 + obj2).mean(1) # 1 is just the dim -- this is default with margin=0.5
-    loss = obj0.mean(1) #losses['obj0+2']
+    # loss = (obj0 + obj2).mean(1)
+    loss = obj0.mean(1)
 
     return loss.mean() if self.average else loss.sum()

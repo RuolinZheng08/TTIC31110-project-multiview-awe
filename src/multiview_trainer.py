@@ -4,10 +4,11 @@ from utils.loader import load
 from saver.saver import save_many, save_config, savez
 
 import torch
+import scipy.special
 
 def train(config):
 
-  vocab = load("vocab_data", config)
+  vocab = load("vocab_data", config) # class multiview_vocab.MultiViewVocab
   vocab_sampler = load("vocab_sampler", config, examples=vocab.examples)
   vocab.init_data_loader(vocab_sampler)
 
@@ -32,6 +33,11 @@ def train(config):
   net = load("net", config, loss_fn=loss_fn,
              view1_input_size=train_data.input_feat_dim,
              view2_num_embeddings=train_data.input_num_subwords)
+  # TODO
+  # log
+  net.loss_fn.i2w = vocab.i2w # for edit dist
+  net.loss_fn.w2s = vocab.w2s
+  
 #   MultiViewRNN(
 #   (net): ModuleDict(
 #     (view1): RNN_default(
