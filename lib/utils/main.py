@@ -79,7 +79,10 @@ args = parser.parse_args()
 config_file = args.config_file
 
 log.info('\n\nStart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-log.info(f"Using {world_size} GPU(s)")
+if torch.cuda.is_available():
+  log.info(f"Using {world_size} GPU(s)")
+else:
+  log.info("Using CPU")
 log.info(f"Machine: {rank} / {world_size}")
 
 if world_size > 1:

@@ -21,7 +21,6 @@ class MultiViewTripletLoss:
     self.extra = extra
     self.average = average
     self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-    self.editdist_cache = {}
 
   def get_sims(self, x, y, inv, y_extra=None): # get_similarity
 
@@ -77,14 +76,7 @@ class MultiViewTripletLoss:
         for k_false in false_label_ind:
           for false, i_false in enumerate(k_false):
             seq_false = self.w2s[self.i2w[i_false.item()]]
-
-            key = tuple(sorted([i_true, i_false]))
-            if not key in self.editdist_cache:
-              dist = editdistance.eval(seq_true, seq_false)
-              self.editdist_cache[key] = dist
-            else:
-              dist = self.editdist_cache[key]
-            
+            dist = editdistance.eval(seq_true, seq_false)
             editdist_tens[true, false] = dist
       return editdist_tens
 
@@ -115,18 +107,17 @@ class MultiViewTripletLoss:
     diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)
     editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind)
     margin = self.margin_max * torch.clamp(editdist_tensor, min=self.threshold_max) / self.threshold_max
-    del editdist_tensor
     obj0 = F.relu(margin + diff_k - same)
 
-    # Most offending words per word
-    word_diff_k, _ = self.get_topk(word_diff, k=k, dim=1)
-    obj1 = F.relu(self.margin + word_diff_k[inv] - same)
+    # # Most offending words per word
+    # word_diff_k, _ = self.get_topk(word_diff, k=k, dim=1)
+    # obj1 = F.relu(self.margin + word_diff_k[inv] - same)
 
-    # Most offending utts per word
-    utt_diff_k = torch.zeros(m, k, device=diff.device)
-    for i in range(m):
-      utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
-    obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
+    # # Most offending utts per word
+    # utt_diff_k = torch.zeros(m, k, device=diff.device)
+    # for i in range(m):
+    #   utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
+    # obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
     # loss = (obj0 + obj2).mean(1)
     loss = obj0.mean(1)
