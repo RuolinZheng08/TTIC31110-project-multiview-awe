@@ -7,8 +7,8 @@
 #SBATCH --job-name=agwe_project
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=04:00:00
-#SBATCH --partition quadro
+#SBATCH --time=07:00:00
+#SBATCH --partition pascal
 #SBATCH --gres=gpu:1
 #SBATCH --mem=24000
 #SBATCH --exclusive
