@@ -4,6 +4,7 @@ import torch
 import torch.nn.functional as F
 
 import editdistance
+from weighted_edit_distance import weighted_edit_distance
 
 class MultiViewTripletLoss:
 
@@ -66,7 +67,7 @@ class MultiViewTripletLoss:
     # returns (top k values, indices)
     return x.topk(min(k, x.shape[dim]), dim=dim)
 
-  def get_editdist_tensor(self, true_label_ind, false_label_ind):
+  def get_editdist_tensor(self, true_label_ind, false_label_ind, use_subcosts=False):
     # true_label_ind (batch_size, 1), false_label_ind (batch_size, k)
     # returns a tensor the same dimension as false_label_ind, i.e. (batch_size, k)
     # TODO: optimize tensor look up and check if it's correct
@@ -76,7 +77,11 @@ class MultiViewTripletLoss:
         for k_false in false_label_ind:
           for false, i_false in enumerate(k_false):
             seq_false = self.w2s[self.i2w[i_false.item()]]
-            dist = editdistance.eval(seq_true, seq_false)
+            if use_subcosts is False:
+              dist = editdistance.eval(seq_true, seq_false)
+            else:
+              dist = weighted_edit_distance(seq_true, seq_false)
+              print('FFFDF', dist)
             editdist_tens[true, false] = dist
       return editdist_tens
 
