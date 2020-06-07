@@ -1,1500 +1,776 @@
-2020-06-05 22:09:46,102: 
+2020-06-07 10:00:35,227: 
 
 Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:09:46,102: Using 1 GPU(s)
-2020-06-05 22:09:46,103: Machine: 0 / 1
-2020-06-05 22:09:46,103: Hyperparam tuning-------------------
-2020-06-05 22:09:46,103: optim_lr: 0.001
-2020-06-05 22:09:46,104: dropout (for both): 0.4
-2020-06-05 22:09:46,104: margin: 0.4
-2020-06-05 22:09:46,104: ------------------------------------
-2020-06-05 22:09:46,105: Calling main function: multiview_trainer.train
-2020-06-05 22:09:46,105: Using config file: train_config.json
-2020-06-05 22:09:46,105: Using module at multiview_trainer.train
-2020-06-05 22:09:46,112: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:09:46,122: Building vocab_data from config
-2020-06-05 22:10:07,234: 
+2020-06-07 10:00:35,228: Using CPU
+2020-06-07 10:00:35,228: Machine: 0 / 1
+2020-06-07 10:00:35,228: Hyperparam tuning-------------------
+2020-06-07 10:00:35,228: optim_lr: 0.001
+2020-06-07 10:00:35,228: dropout (for both): 0.4
+2020-06-07 10:00:35,228: margin: 0.4
+2020-06-07 10:00:35,228: ------------------------------------
+2020-06-07 10:00:35,231: Calling main function: multiview_trainer.train
+2020-06-07 10:00:35,231: Using config file: train_config.json
+2020-06-07 10:00:35,231: Using module at multiview_trainer.train
+2020-06-07 10:01:05,730: 
 
 Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:10:07,234: Using 1 GPU(s)
-2020-06-05 22:10:07,234: Machine: 0 / 1
-2020-06-05 22:10:07,235: Hyperparam tuning-------------------
-2020-06-05 22:10:07,235: optim_lr: 0.001
-2020-06-05 22:10:07,235: dropout (for both): 0.4
-2020-06-05 22:10:07,236: margin: 0.4
-2020-06-05 22:10:07,236: ------------------------------------
-2020-06-05 22:10:07,236: Calling main function: multiview_trainer.train
-2020-06-05 22:10:07,236: Using config file: train_config.json
-2020-06-05 22:10:07,236: Using module at multiview_trainer.train
-2020-06-05 22:10:07,238: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:10:07,240: Building vocab_data from config
-2020-06-05 22:10:07,550:  >> min_count= 0
-2020-06-05 22:10:07,550:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:10:07,550:  >> # subwords= 45
-2020-06-05 22:10:07,550:     [laughter]= 1
-2020-06-05 22:10:07,550:     [noise]= 2
-2020-06-05 22:10:07,551:     [vocalized-noise]= 3
-2020-06-05 22:10:07,551:     aa= 4
-2020-06-05 22:10:07,551:     ae= 5
-2020-06-05 22:10:07,551:     ah= 6
-2020-06-05 22:10:07,551:     ao= 7
-2020-06-05 22:10:07,551:     aw= 8
-2020-06-05 22:10:07,551:     ax= 9
-2020-06-05 22:10:07,551:     ay= 10
-2020-06-05 22:10:07,551:     b= 11
-2020-06-05 22:10:07,551:     ch= 12
-2020-06-05 22:10:07,551:     d= 13
-2020-06-05 22:10:07,552:     dh= 14
-2020-06-05 22:10:07,552:     eh= 15
-2020-06-05 22:10:07,552:     el= 16
-2020-06-05 22:10:07,552:     en= 17
-2020-06-05 22:10:07,552:     er= 18
-2020-06-05 22:10:07,552:     ey= 19
-2020-06-05 22:10:07,552:     f= 20
-2020-06-05 22:10:07,552:     g= 21
-2020-06-05 22:10:07,552:     hh= 22
-2020-06-05 22:10:07,552:     ih= 23
-2020-06-05 22:10:07,553:     iy= 24
-2020-06-05 22:10:07,553:     jh= 25
-2020-06-05 22:10:07,553:     k= 26
-2020-06-05 22:10:07,553:     l= 27
-2020-06-05 22:10:07,553:     m= 28
-2020-06-05 22:10:07,553:     n= 29
-2020-06-05 22:10:07,553:     ng= 30
-2020-06-05 22:10:07,553:     ow= 31
-2020-06-05 22:10:07,553:     oy= 32
-2020-06-05 22:10:07,553:     p= 33
-2020-06-05 22:10:07,554:     r= 34
-2020-06-05 22:10:07,554:     s= 35
-2020-06-05 22:10:07,554:     sh= 36
-2020-06-05 22:10:07,554:     t= 37
-2020-06-05 22:10:07,554:     th= 38
-2020-06-05 22:10:07,554:     uh= 39
-2020-06-05 22:10:07,554:     uw= 40
-2020-06-05 22:10:07,554:     v= 41
-2020-06-05 22:10:07,554:     w= 42
-2020-06-05 22:10:07,554:     y= 43
-2020-06-05 22:10:07,554:     z= 44
-2020-06-05 22:10:07,555:     zh= 45
-2020-06-05 22:10:07,571: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:10:07,575: Building vocab_sampler from config
-2020-06-05 22:10:07,575:  >> # examples= 34323
-2020-06-05 22:10:07,575:  >> batch_size= 1000
-2020-06-05 22:10:07,576:  >> shuffle= False
-2020-06-05 22:10:07,584:  >> BatchSampler; 35 batches
-2020-06-05 22:10:07,584: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:10:07,769: Building train_data from config
-2020-06-05 22:10:13,707:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:10:13,708:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:10:13,708:  >> stack= False
-2020-06-05 22:10:13,708:  >> seg_durs= (1, None)
-2020-06-05 22:10:13,708:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:10:13,708:  >> input_feat_dim= 108
-2020-06-05 22:10:13,708:  >> input_num_subwords= 45
-2020-06-05 22:10:13,708: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:10:13,708: Building train_sampler from config
-2020-06-05 22:10:13,709:  >> # examples= 9971
-2020-06-05 22:10:13,709:  >> batch_size= 256
-2020-06-05 22:10:13,709:  >> shuffle= True
-2020-06-05 22:10:13,723:  >> BatchSampler; 39 batches
-2020-06-05 22:10:13,723: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:10:13,723: Building dev_data from config
-2020-06-05 22:10:20,338:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 22:10:20,338:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 22:10:20,338:  >> stack= False
-2020-06-05 22:10:20,338:  >> seg_durs= (1, None)
-2020-06-05 22:10:20,338:  >> # words= 10966 (# ignored= 0)
-2020-06-05 22:10:20,339:  >> input_feat_dim= 108
-2020-06-05 22:10:20,339:  >> input_num_subwords= 45
-2020-06-05 22:10:20,339: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:10:20,339: Building dev_sampler from config
-2020-06-05 22:10:20,339:  >> # examples= 10966
-2020-06-05 22:10:20,339:  >> batch_size= 256
-2020-06-05 22:10:20,340:  >> shuffle= False
-2020-06-05 22:10:20,342:  >> BatchSampler; 43 batches
-2020-06-05 22:10:20,343: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:10:20,343: Building test_data from config
-2020-06-05 22:10:26,065:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 22:10:26,066:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 22:10:26,066:  >> stack= False
-2020-06-05 22:10:26,066:  >> seg_durs= (1, None)
-2020-06-05 22:10:26,066:  >> # words= 11024 (# ignored= 0)
-2020-06-05 22:10:26,066:  >> input_feat_dim= 108
-2020-06-05 22:10:26,066:  >> input_num_subwords= 45
-2020-06-05 22:10:26,066: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:10:26,066: Building test_sampler from config
-2020-06-05 22:10:26,067:  >> # examples= 11024
-2020-06-05 22:10:26,067:  >> batch_size= 256
-2020-06-05 22:10:26,067:  >> shuffle= False
-2020-06-05 22:10:26,070:  >> BatchSampler; 44 batches
-2020-06-05 22:10:26,070: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 22:10:26,079: Building loss from config
-2020-06-05 22:10:26,079:  >> margin= 0.4
-2020-06-05 22:10:26,079:  >> k= 16
-2020-06-05 22:10:26,079:  >> min_k= 8
-2020-06-05 22:10:26,079:  >> extra= 0
-2020-06-05 22:10:26,079:  >> average= False
-2020-06-05 22:10:26,079: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 22:10:28,417: Building eval from config
-2020-06-05 22:10:28,417:  >> acoustic_ap= True
-2020-06-05 22:10:28,417:  >> crossview_ap= True
-2020-06-05 22:10:28,418:  >> full_vocab= False
-2020-06-05 22:10:28,418:  >> metric= crossview_ap
-2020-06-05 22:10:28,418:  >> mode= max
-2020-06-05 22:10:28,418: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 22:10:28,440: Building net from config
-2020-06-05 22:10:28,441: view1:
-2020-06-05 22:10:28,442:  >> cell= GRU
-2020-06-05 22:10:28,442:  >> input_size= 108
-2020-06-05 22:10:28,442:  >> hidden_size= 512
-2020-06-05 22:10:28,442:  >> bidirectional= True
-2020-06-05 22:10:28,442:  >> num_layers= 6
-2020-06-05 22:10:28,442:  >> dropout between layers= 0.4
-2020-06-05 22:10:28,763: view2:
-2020-06-05 22:10:28,764:  >> cell= GRU
-2020-06-05 22:10:28,764:  >> input_size= 64
-2020-06-05 22:10:28,764:  >> hidden_size= 512
-2020-06-05 22:10:28,764:  >> bidirectional= True
-2020-06-05 22:10:28,764:  >> num_layers= 2
-2020-06-05 22:10:28,764:  >> dropout between layers= 0.4
-2020-06-05 22:10:28,764:  >> num input embeddings= 45
-2020-06-05 22:10:28,931: Using module at optim.adam.Adam
-2020-06-05 22:10:28,939: Building optim from config
-2020-06-05 22:10:28,939:  >> lr= 0.001
-2020-06-05 22:10:28,939:  >> betas= (0.9, 0.999)
-2020-06-05 22:10:28,939:  >> eps= 1e-08
-2020-06-05 22:10:28,939:  >> weight_decay= 0
-2020-06-05 22:10:28,940:  >> amsgrad= False
-2020-06-05 22:10:28,940:  >> min_lr= 1e-07
-2020-06-05 22:10:28,940: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 22:10:29,012: Building sched from config
-2020-06-05 22:10:29,012:  >> optim= Adam
-2020-06-05 22:10:29,012:  >> decay lr by 0.1
-2020-06-05 22:10:29,012:  >> eval_fn= MultiViewAP
-2020-06-05 22:10:29,013:  >> patience=4
-2020-06-05 22:10:29,013:  >> revert=True
-2020-06-05 22:10:29,013: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 22:10:29,013: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 22:15:58,727: 
+2020-06-07 10:01:05,731: Using CPU
+2020-06-07 10:01:05,731: Machine: 0 / 1
+2020-06-07 10:01:05,731: Hyperparam tuning-------------------
+2020-06-07 10:01:05,731: optim_lr: 0.001
+2020-06-07 10:01:05,732: dropout (for both): 0.4
+2020-06-07 10:01:05,732: margin: 0.4
+2020-06-07 10:01:05,732: ------------------------------------
+2020-06-07 10:01:05,734: Calling main function: multiview_trainer.train
+2020-06-07 10:01:05,734: Using config file: train_config.json
+2020-06-07 10:01:05,734: Using module at multiview_trainer.train
+2020-06-07 10:01:07,258: Using module at multiview_vocab.MultiViewVocab
+2020-06-07 10:01:07,261: Building vocab_data from config
+2020-06-07 10:01:07,556:  >> min_count= 0
+2020-06-07 10:01:07,556:  >> # words= 34323 (# removed= 0)
+2020-06-07 10:01:07,556:  >> # subwords= 45
+2020-06-07 10:01:07,557:     [laughter]= 1
+2020-06-07 10:01:07,557:     [noise]= 2
+2020-06-07 10:01:07,557:     [vocalized-noise]= 3
+2020-06-07 10:01:07,557:     aa= 4
+2020-06-07 10:01:07,557:     ae= 5
+2020-06-07 10:01:07,557:     ah= 6
+2020-06-07 10:01:07,557:     ao= 7
+2020-06-07 10:01:07,557:     aw= 8
+2020-06-07 10:01:07,557:     ax= 9
+2020-06-07 10:01:07,557:     ay= 10
+2020-06-07 10:01:07,557:     b= 11
+2020-06-07 10:01:07,558:     ch= 12
+2020-06-07 10:01:07,558:     d= 13
+2020-06-07 10:01:07,558:     dh= 14
+2020-06-07 10:01:07,558:     eh= 15
+2020-06-07 10:01:07,558:     el= 16
+2020-06-07 10:01:07,558:     en= 17
+2020-06-07 10:01:07,558:     er= 18
+2020-06-07 10:01:07,558:     ey= 19
+2020-06-07 10:01:07,558:     f= 20
+2020-06-07 10:01:07,558:     g= 21
+2020-06-07 10:01:07,558:     hh= 22
+2020-06-07 10:01:07,559:     ih= 23
+2020-06-07 10:01:07,559:     iy= 24
+2020-06-07 10:01:07,559:     jh= 25
+2020-06-07 10:01:07,559:     k= 26
+2020-06-07 10:01:07,559:     l= 27
+2020-06-07 10:01:07,559:     m= 28
+2020-06-07 10:01:07,559:     n= 29
+2020-06-07 10:01:07,559:     ng= 30
+2020-06-07 10:01:07,559:     ow= 31
+2020-06-07 10:01:07,559:     oy= 32
+2020-06-07 10:01:07,559:     p= 33
+2020-06-07 10:01:07,560:     r= 34
+2020-06-07 10:01:07,560:     s= 35
+2020-06-07 10:01:07,560:     sh= 36
+2020-06-07 10:01:07,560:     t= 37
+2020-06-07 10:01:07,560:     th= 38
+2020-06-07 10:01:07,560:     uh= 39
+2020-06-07 10:01:07,560:     uw= 40
+2020-06-07 10:01:07,560:     v= 41
+2020-06-07 10:01:07,560:     w= 42
+2020-06-07 10:01:07,560:     y= 43
+2020-06-07 10:01:07,561:     z= 44
+2020-06-07 10:01:07,561:     zh= 45
+2020-06-07 10:01:07,576: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:01:07,579: Building vocab_sampler from config
+2020-06-07 10:01:07,579:  >> # examples= 34323
+2020-06-07 10:01:07,579:  >> batch_size= 1000
+2020-06-07 10:01:07,579:  >> shuffle= False
+2020-06-07 10:01:07,587:  >> BatchSampler; 35 batches
+2020-06-07 10:01:07,587: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:01:08,169: Building train_data from config
+2020-06-07 10:01:17,469:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.train.hdf5
+2020-06-07 10:01:17,469:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.train.hdf5
+2020-06-07 10:01:17,469:  >> stack= False
+2020-06-07 10:01:17,469:  >> seg_durs= (1, None)
+2020-06-07 10:01:17,469:  >> # words= 9971 (# ignored= 0)
+2020-06-07 10:01:17,469:  >> input_feat_dim= 108
+2020-06-07 10:01:17,469:  >> input_num_subwords= 45
+2020-06-07 10:01:17,469: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:01:17,470: Building train_sampler from config
+2020-06-07 10:01:17,470:  >> # examples= 9971
+2020-06-07 10:01:17,470:  >> batch_size= 256
+2020-06-07 10:01:17,470:  >> shuffle= True
+2020-06-07 10:01:17,483:  >> BatchSampler; 39 batches
+2020-06-07 10:01:17,483: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:01:17,483: Building dev_data from config
+2020-06-07 10:01:28,147:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.dev.hdf5
+2020-06-07 10:01:28,148:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.dev.hdf5
+2020-06-07 10:01:28,148:  >> stack= False
+2020-06-07 10:01:28,148:  >> seg_durs= (1, None)
+2020-06-07 10:01:28,149:  >> # words= 10966 (# ignored= 0)
+2020-06-07 10:01:28,150:  >> input_feat_dim= 108
+2020-06-07 10:01:28,150:  >> input_num_subwords= 45
+2020-06-07 10:01:28,150: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:01:28,150: Building dev_sampler from config
+2020-06-07 10:01:28,151:  >> # examples= 10966
+2020-06-07 10:01:28,151:  >> batch_size= 256
+2020-06-07 10:01:28,151:  >> shuffle= False
+2020-06-07 10:01:28,155:  >> BatchSampler; 43 batches
+2020-06-07 10:01:28,156: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:01:28,156: Building test_data from config
+2020-06-07 10:01:37,543:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.test.hdf5
+2020-06-07 10:01:37,543:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.test.hdf5
+2020-06-07 10:01:37,543:  >> stack= False
+2020-06-07 10:01:37,543:  >> seg_durs= (1, None)
+2020-06-07 10:01:37,543:  >> # words= 11024 (# ignored= 0)
+2020-06-07 10:01:37,543:  >> input_feat_dim= 108
+2020-06-07 10:01:37,543:  >> input_num_subwords= 45
+2020-06-07 10:01:37,544: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:01:37,544: Building test_sampler from config
+2020-06-07 10:01:37,544:  >> # examples= 11024
+2020-06-07 10:01:37,544:  >> batch_size= 256
+2020-06-07 10:01:37,544:  >> shuffle= False
+2020-06-07 10:01:37,547:  >> BatchSampler; 44 batches
+2020-06-07 10:01:37,547: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
+2020-06-07 10:11:00,673: 
 
 Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:15:58,727: Using 1 GPU(s)
-2020-06-05 22:15:58,728: Machine: 0 / 1
-2020-06-05 22:15:58,729: Hyperparam tuning-------------------
-2020-06-05 22:15:58,730: optim_lr: 0.001
-2020-06-05 22:15:58,731: dropout (for both): 0.4
-2020-06-05 22:15:58,731: margin: 0.4
-2020-06-05 22:15:58,731: ------------------------------------
-2020-06-05 22:15:58,736: Calling main function: multiview_trainer.train
-2020-06-05 22:15:58,736: Using config file: train_config.json
-2020-06-05 22:15:58,736: Using module at multiview_trainer.train
-2020-06-05 22:15:59,153: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:15:59,171: Building vocab_data from config
-2020-06-05 22:15:59,488:  >> min_count= 0
-2020-06-05 22:15:59,488:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:15:59,488:  >> # subwords= 45
-2020-06-05 22:15:59,488:     [laughter]= 1
-2020-06-05 22:15:59,488:     [noise]= 2
-2020-06-05 22:15:59,488:     [vocalized-noise]= 3
-2020-06-05 22:15:59,489:     aa= 4
-2020-06-05 22:15:59,489:     ae= 5
-2020-06-05 22:15:59,489:     ah= 6
-2020-06-05 22:15:59,489:     ao= 7
-2020-06-05 22:15:59,489:     aw= 8
-2020-06-05 22:15:59,489:     ax= 9
-2020-06-05 22:15:59,489:     ay= 10
-2020-06-05 22:15:59,489:     b= 11
-2020-06-05 22:15:59,490:     ch= 12
-2020-06-05 22:15:59,490:     d= 13
-2020-06-05 22:15:59,490:     dh= 14
-2020-06-05 22:15:59,490:     eh= 15
-2020-06-05 22:15:59,490:     el= 16
-2020-06-05 22:15:59,490:     en= 17
-2020-06-05 22:15:59,490:     er= 18
-2020-06-05 22:15:59,490:     ey= 19
-2020-06-05 22:15:59,491:     f= 20
-2020-06-05 22:15:59,491:     g= 21
-2020-06-05 22:15:59,491:     hh= 22
-2020-06-05 22:15:59,491:     ih= 23
-2020-06-05 22:15:59,491:     iy= 24
-2020-06-05 22:15:59,491:     jh= 25
-2020-06-05 22:15:59,491:     k= 26
-2020-06-05 22:15:59,491:     l= 27
-2020-06-05 22:15:59,492:     m= 28
-2020-06-05 22:15:59,492:     n= 29
-2020-06-05 22:15:59,492:     ng= 30
-2020-06-05 22:15:59,492:     ow= 31
-2020-06-05 22:15:59,492:     oy= 32
-2020-06-05 22:15:59,492:     p= 33
-2020-06-05 22:15:59,492:     r= 34
-2020-06-05 22:15:59,492:     s= 35
-2020-06-05 22:15:59,492:     sh= 36
-2020-06-05 22:15:59,493:     t= 37
-2020-06-05 22:15:59,493:     th= 38
-2020-06-05 22:15:59,493:     uh= 39
-2020-06-05 22:15:59,493:     uw= 40
-2020-06-05 22:15:59,493:     v= 41
-2020-06-05 22:15:59,493:     w= 42
-2020-06-05 22:15:59,493:     y= 43
-2020-06-05 22:15:59,493:     z= 44
-2020-06-05 22:15:59,494:     zh= 45
-2020-06-05 22:15:59,505: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:15:59,507: Building vocab_sampler from config
-2020-06-05 22:15:59,508:  >> # examples= 34323
-2020-06-05 22:15:59,508:  >> batch_size= 1000
-2020-06-05 22:15:59,508:  >> shuffle= False
-2020-06-05 22:15:59,515:  >> BatchSampler; 35 batches
-2020-06-05 22:15:59,516: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:16:00,284: Building train_data from config
-2020-06-05 22:16:05,259:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:16:05,259:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:16:05,259:  >> stack= False
-2020-06-05 22:16:05,259:  >> seg_durs= (1, None)
-2020-06-05 22:16:05,260:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:16:05,260:  >> input_feat_dim= 108
-2020-06-05 22:16:05,260:  >> input_num_subwords= 45
-2020-06-05 22:16:05,260: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:16:05,261: Building train_sampler from config
-2020-06-05 22:16:05,261:  >> # examples= 9971
-2020-06-05 22:16:05,261:  >> batch_size= 256
-2020-06-05 22:16:05,262:  >> shuffle= True
-2020-06-05 22:16:05,274:  >> BatchSampler; 39 batches
-2020-06-05 22:16:05,274: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:16:05,274: Building dev_data from config
-2020-06-05 22:16:11,039:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 22:16:11,039:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 22:16:11,039:  >> stack= False
-2020-06-05 22:16:11,039:  >> seg_durs= (1, None)
-2020-06-05 22:16:11,039:  >> # words= 10966 (# ignored= 0)
-2020-06-05 22:16:11,039:  >> input_feat_dim= 108
-2020-06-05 22:16:11,039:  >> input_num_subwords= 45
-2020-06-05 22:16:11,040: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:16:11,040: Building dev_sampler from config
-2020-06-05 22:16:11,040:  >> # examples= 10966
-2020-06-05 22:16:11,040:  >> batch_size= 256
-2020-06-05 22:16:11,040:  >> shuffle= False
-2020-06-05 22:16:11,042:  >> BatchSampler; 43 batches
-2020-06-05 22:16:11,043: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:16:11,043: Building test_data from config
-2020-06-05 22:16:16,056:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 22:16:16,056:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 22:16:16,056:  >> stack= False
-2020-06-05 22:16:16,056:  >> seg_durs= (1, None)
-2020-06-05 22:16:16,056:  >> # words= 11024 (# ignored= 0)
-2020-06-05 22:16:16,056:  >> input_feat_dim= 108
-2020-06-05 22:16:16,056:  >> input_num_subwords= 45
-2020-06-05 22:16:16,057: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:16:16,057: Building test_sampler from config
-2020-06-05 22:16:16,057:  >> # examples= 11024
-2020-06-05 22:16:16,057:  >> batch_size= 256
-2020-06-05 22:16:16,057:  >> shuffle= False
-2020-06-05 22:16:16,059:  >> BatchSampler; 44 batches
-2020-06-05 22:16:16,059: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 22:16:16,104: Building loss from config
-2020-06-05 22:16:16,104:  >> margin= 0.4
-2020-06-05 22:16:16,104:  >> k= 16
-2020-06-05 22:16:16,104:  >> min_k= 8
-2020-06-05 22:16:16,105:  >> extra= 0
-2020-06-05 22:16:16,105:  >> average= False
-2020-06-05 22:16:16,130: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 22:16:16,244: Building eval from config
-2020-06-05 22:16:16,244:  >> acoustic_ap= True
-2020-06-05 22:16:16,244:  >> crossview_ap= True
-2020-06-05 22:16:16,244:  >> full_vocab= False
-2020-06-05 22:16:16,245:  >> metric= crossview_ap
-2020-06-05 22:16:16,245:  >> mode= max
-2020-06-05 22:16:16,245: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 22:16:16,271: Building net from config
-2020-06-05 22:16:16,273: view1:
-2020-06-05 22:16:16,274:  >> cell= GRU
-2020-06-05 22:16:16,275:  >> input_size= 108
-2020-06-05 22:16:16,275:  >> hidden_size= 512
-2020-06-05 22:16:16,275:  >> bidirectional= True
-2020-06-05 22:16:16,275:  >> num_layers= 6
-2020-06-05 22:16:16,275:  >> dropout between layers= 0.4
-2020-06-05 22:16:16,479: view2:
-2020-06-05 22:16:16,479:  >> cell= GRU
-2020-06-05 22:16:16,479:  >> input_size= 64
-2020-06-05 22:16:16,479:  >> hidden_size= 512
-2020-06-05 22:16:16,480:  >> bidirectional= True
-2020-06-05 22:16:16,480:  >> num_layers= 2
-2020-06-05 22:16:16,480:  >> dropout between layers= 0.4
-2020-06-05 22:16:16,480:  >> num input embeddings= 45
-2020-06-05 22:16:16,575: Using module at optim.adam.Adam
-2020-06-05 22:16:16,582: Building optim from config
-2020-06-05 22:16:16,583:  >> lr= 0.001
-2020-06-05 22:16:16,583:  >> betas= (0.9, 0.999)
-2020-06-05 22:16:16,583:  >> eps= 1e-08
-2020-06-05 22:16:16,583:  >> weight_decay= 0
-2020-06-05 22:16:16,583:  >> amsgrad= False
-2020-06-05 22:16:16,583:  >> min_lr= 1e-07
-2020-06-05 22:16:16,584: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 22:16:16,596: Building sched from config
-2020-06-05 22:16:16,597:  >> optim= Adam
-2020-06-05 22:16:16,597:  >> decay lr by 0.1
-2020-06-05 22:16:16,597:  >> eval_fn= MultiViewAP
-2020-06-05 22:16:16,598:  >> patience=4
-2020-06-05 22:16:16,599:  >> revert=True
-2020-06-05 22:16:16,599: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 22:16:16,599: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 22:19:26,986: 0) loss=0.708 grad_norm=51.02 num_segments=256 num_words=204
-2020-06-05 22:19:44,334: 
+2020-06-07 10:11:00,673: Using CPU
+2020-06-07 10:11:00,674: Machine: 0 / 1
+2020-06-07 10:11:00,674: Hyperparam tuning-------------------
+2020-06-07 10:11:00,674: optim_lr: 0.001
+2020-06-07 10:11:00,674: dropout (for both): 0.4
+2020-06-07 10:11:00,675: margin: 0.4
+2020-06-07 10:11:00,675: ------------------------------------
+2020-06-07 10:11:00,677: Calling main function: multiview_trainer.train
+2020-06-07 10:11:00,677: Using config file: train_config.json
+2020-06-07 10:11:00,677: Using module at multiview_trainer.train
+2020-06-07 10:11:00,959: Using module at multiview_vocab.MultiViewVocab
+2020-06-07 10:11:00,960: Building vocab_data from config
+2020-06-07 10:11:01,358:  >> min_count= 0
+2020-06-07 10:11:01,359:  >> # words= 34323 (# removed= 0)
+2020-06-07 10:11:01,359:  >> # subwords= 45
+2020-06-07 10:11:01,359:     [laughter]= 1
+2020-06-07 10:11:01,359:     [noise]= 2
+2020-06-07 10:11:01,359:     [vocalized-noise]= 3
+2020-06-07 10:11:01,359:     aa= 4
+2020-06-07 10:11:01,359:     ae= 5
+2020-06-07 10:11:01,360:     ah= 6
+2020-06-07 10:11:01,360:     ao= 7
+2020-06-07 10:11:01,360:     aw= 8
+2020-06-07 10:11:01,360:     ax= 9
+2020-06-07 10:11:01,360:     ay= 10
+2020-06-07 10:11:01,360:     b= 11
+2020-06-07 10:11:01,360:     ch= 12
+2020-06-07 10:11:01,361:     d= 13
+2020-06-07 10:11:01,361:     dh= 14
+2020-06-07 10:11:01,361:     eh= 15
+2020-06-07 10:11:01,361:     el= 16
+2020-06-07 10:11:01,361:     en= 17
+2020-06-07 10:11:01,361:     er= 18
+2020-06-07 10:11:01,361:     ey= 19
+2020-06-07 10:11:01,362:     f= 20
+2020-06-07 10:11:01,362:     g= 21
+2020-06-07 10:11:01,362:     hh= 22
+2020-06-07 10:11:01,362:     ih= 23
+2020-06-07 10:11:01,362:     iy= 24
+2020-06-07 10:11:01,362:     jh= 25
+2020-06-07 10:11:01,362:     k= 26
+2020-06-07 10:11:01,362:     l= 27
+2020-06-07 10:11:01,363:     m= 28
+2020-06-07 10:11:01,363:     n= 29
+2020-06-07 10:11:01,363:     ng= 30
+2020-06-07 10:11:01,363:     ow= 31
+2020-06-07 10:11:01,363:     oy= 32
+2020-06-07 10:11:01,363:     p= 33
+2020-06-07 10:11:01,363:     r= 34
+2020-06-07 10:11:01,364:     s= 35
+2020-06-07 10:11:01,364:     sh= 36
+2020-06-07 10:11:01,364:     t= 37
+2020-06-07 10:11:01,364:     th= 38
+2020-06-07 10:11:01,364:     uh= 39
+2020-06-07 10:11:01,364:     uw= 40
+2020-06-07 10:11:01,364:     v= 41
+2020-06-07 10:11:01,365:     w= 42
+2020-06-07 10:11:01,365:     y= 43
+2020-06-07 10:11:01,365:     z= 44
+2020-06-07 10:11:01,365:     zh= 45
+2020-06-07 10:11:01,389: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:11:01,390: Building vocab_sampler from config
+2020-06-07 10:11:01,393:  >> # examples= 34323
+2020-06-07 10:11:01,394:  >> batch_size= 1000
+2020-06-07 10:11:01,394:  >> shuffle= False
+2020-06-07 10:11:01,402:  >> BatchSampler; 35 batches
+2020-06-07 10:11:01,403: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:11:01,544: Building train_data from config
+2020-06-07 10:11:12,006:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.train.hdf5
+2020-06-07 10:11:12,007:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.train.hdf5
+2020-06-07 10:11:12,007:  >> stack= False
+2020-06-07 10:11:12,007:  >> seg_durs= (1, None)
+2020-06-07 10:11:12,007:  >> # words= 9971 (# ignored= 0)
+2020-06-07 10:11:12,008:  >> input_feat_dim= 108
+2020-06-07 10:11:12,008:  >> input_num_subwords= 45
+2020-06-07 10:11:12,008: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:11:12,008: Building train_sampler from config
+2020-06-07 10:11:12,009:  >> # examples= 9971
+2020-06-07 10:11:12,009:  >> batch_size= 256
+2020-06-07 10:11:12,009:  >> shuffle= True
+2020-06-07 10:11:12,019:  >> BatchSampler; 39 batches
+2020-06-07 10:11:12,019: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:11:12,019: Building dev_data from config
+2020-06-07 10:11:23,416:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.dev.hdf5
+2020-06-07 10:11:23,416:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.dev.hdf5
+2020-06-07 10:11:23,416:  >> stack= False
+2020-06-07 10:11:23,416:  >> seg_durs= (1, None)
+2020-06-07 10:11:23,416:  >> # words= 10966 (# ignored= 0)
+2020-06-07 10:11:23,416:  >> input_feat_dim= 108
+2020-06-07 10:11:23,417:  >> input_num_subwords= 45
+2020-06-07 10:11:23,417: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:11:23,417: Building dev_sampler from config
+2020-06-07 10:11:23,417:  >> # examples= 10966
+2020-06-07 10:11:23,417:  >> batch_size= 256
+2020-06-07 10:11:23,418:  >> shuffle= False
+2020-06-07 10:11:23,420:  >> BatchSampler; 43 batches
+2020-06-07 10:11:23,420: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:11:23,421: Building test_data from config
+2020-06-07 10:11:33,744:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.test.hdf5
+2020-06-07 10:11:33,744:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.test.hdf5
+2020-06-07 10:11:33,744:  >> stack= False
+2020-06-07 10:11:33,744:  >> seg_durs= (1, None)
+2020-06-07 10:11:33,744:  >> # words= 11024 (# ignored= 0)
+2020-06-07 10:11:33,744:  >> input_feat_dim= 108
+2020-06-07 10:11:33,745:  >> input_num_subwords= 45
+2020-06-07 10:11:33,745: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:11:33,745: Building test_sampler from config
+2020-06-07 10:11:33,746:  >> # examples= 11024
+2020-06-07 10:11:33,746:  >> batch_size= 256
+2020-06-07 10:11:33,746:  >> shuffle= False
+2020-06-07 10:11:33,749:  >> BatchSampler; 44 batches
+2020-06-07 10:11:33,749: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
+2020-06-07 10:11:33,783: Building loss from config
+2020-06-07 10:11:33,784:  >> margin= 0.4
+2020-06-07 10:11:33,784:  >> k= 16
+2020-06-07 10:11:33,784:  >> min_k= 8
+2020-06-07 10:11:33,784:  >> extra= 0
+2020-06-07 10:11:33,785:  >> average= False
+2020-06-07 10:11:33,785: Using module at metric.multiview_ap.MultiViewAP
+2020-06-07 10:11:33,874: Building eval from config
+2020-06-07 10:11:33,875:  >> acoustic_ap= True
+2020-06-07 10:11:33,875:  >> crossview_ap= True
+2020-06-07 10:11:33,875:  >> full_vocab= False
+2020-06-07 10:11:33,875:  >> metric= crossview_ap
+2020-06-07 10:11:33,875:  >> mode= max
+2020-06-07 10:11:33,875: Using module at multiview_rnn.MultiViewRNN
+2020-06-07 10:11:33,882: Building net from config
+2020-06-07 10:11:33,883: view1:
+2020-06-07 10:11:33,884:  >> cell= GRU
+2020-06-07 10:11:33,884:  >> input_size= 108
+2020-06-07 10:11:33,884:  >> hidden_size= 512
+2020-06-07 10:11:33,884:  >> bidirectional= True
+2020-06-07 10:11:33,884:  >> num_layers= 6
+2020-06-07 10:11:33,884:  >> dropout between layers= 0.4
+2020-06-07 10:11:34,163: view2:
+2020-06-07 10:11:34,163:  >> cell= GRU
+2020-06-07 10:11:34,163:  >> input_size= 64
+2020-06-07 10:11:34,163:  >> hidden_size= 512
+2020-06-07 10:11:34,163:  >> bidirectional= True
+2020-06-07 10:11:34,164:  >> num_layers= 2
+2020-06-07 10:11:34,164:  >> dropout between layers= 0.4
+2020-06-07 10:11:34,164:  >> num input embeddings= 45
+2020-06-07 10:11:34,238: Using module at optim.adam.Adam
+2020-06-07 10:11:34,240: Building optim from config
+2020-06-07 10:11:34,240:  >> lr= 0.001
+2020-06-07 10:11:34,240:  >> betas= (0.9, 0.999)
+2020-06-07 10:11:34,240:  >> eps= 1e-08
+2020-06-07 10:11:34,240:  >> weight_decay= 0
+2020-06-07 10:11:34,240:  >> amsgrad= False
+2020-06-07 10:11:34,241:  >> min_lr= 1e-07
+2020-06-07 10:11:34,241: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
+2020-06-07 10:11:34,249: Building sched from config
+2020-06-07 10:11:34,250:  >> optim= Adam
+2020-06-07 10:11:34,250:  >> decay lr by 0.1
+2020-06-07 10:11:34,250:  >> eval_fn= MultiViewAP
+2020-06-07 10:11:34,250:  >> patience=4
+2020-06-07 10:11:34,250:  >> revert=True
+2020-06-07 10:11:34,250: epoch=0.00 global_step=0 lr=0.001 start_iter=0
+2020-06-07 10:11:34,251: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
+2020-06-07 10:12:41,809: 
 
 Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:19:44,334: Using 1 GPU(s)
-2020-06-05 22:19:44,335: Machine: 0 / 1
-2020-06-05 22:19:44,336: Hyperparam tuning-------------------
-2020-06-05 22:19:44,336: optim_lr: 0.001
-2020-06-05 22:19:44,336: dropout (for both): 0.4
-2020-06-05 22:19:44,336: margin: 0.4
-2020-06-05 22:19:44,337: ------------------------------------
-2020-06-05 22:19:44,339: Calling main function: multiview_trainer.train
-2020-06-05 22:19:44,339: Using config file: train_config.json
-2020-06-05 22:19:44,339: Using module at multiview_trainer.train
-2020-06-05 22:19:44,578: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:19:44,586: Building vocab_data from config
-2020-06-05 22:19:44,802:  >> min_count= 0
-2020-06-05 22:19:44,803:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:19:44,803:  >> # subwords= 45
-2020-06-05 22:19:44,803:     [laughter]= 1
-2020-06-05 22:19:44,803:     [noise]= 2
-2020-06-05 22:19:44,803:     [vocalized-noise]= 3
-2020-06-05 22:19:44,803:     aa= 4
-2020-06-05 22:19:44,803:     ae= 5
-2020-06-05 22:19:44,803:     ah= 6
-2020-06-05 22:19:44,803:     ao= 7
-2020-06-05 22:19:44,804:     aw= 8
-2020-06-05 22:19:44,804:     ax= 9
-2020-06-05 22:19:44,804:     ay= 10
-2020-06-05 22:19:44,804:     b= 11
-2020-06-05 22:19:44,804:     ch= 12
-2020-06-05 22:19:44,804:     d= 13
-2020-06-05 22:19:44,804:     dh= 14
-2020-06-05 22:19:44,804:     eh= 15
-2020-06-05 22:19:44,805:     el= 16
-2020-06-05 22:19:44,805:     en= 17
-2020-06-05 22:19:44,805:     er= 18
-2020-06-05 22:19:44,805:     ey= 19
-2020-06-05 22:19:44,805:     f= 20
-2020-06-05 22:19:44,805:     g= 21
-2020-06-05 22:19:44,805:     hh= 22
-2020-06-05 22:19:44,805:     ih= 23
-2020-06-05 22:19:44,805:     iy= 24
-2020-06-05 22:19:44,806:     jh= 25
-2020-06-05 22:19:44,806:     k= 26
-2020-06-05 22:19:44,806:     l= 27
-2020-06-05 22:19:44,806:     m= 28
-2020-06-05 22:19:44,806:     n= 29
-2020-06-05 22:19:44,806:     ng= 30
-2020-06-05 22:19:44,806:     ow= 31
-2020-06-05 22:19:44,806:     oy= 32
-2020-06-05 22:19:44,807:     p= 33
-2020-06-05 22:19:44,807:     r= 34
-2020-06-05 22:19:44,807:     s= 35
-2020-06-05 22:19:44,807:     sh= 36
-2020-06-05 22:19:44,807:     t= 37
-2020-06-05 22:19:44,807:     th= 38
-2020-06-05 22:19:44,807:     uh= 39
-2020-06-05 22:19:44,807:     uw= 40
-2020-06-05 22:19:44,808:     v= 41
-2020-06-05 22:19:44,808:     w= 42
-2020-06-05 22:19:44,808:     y= 43
-2020-06-05 22:19:44,808:     z= 44
-2020-06-05 22:19:44,808:     zh= 45
-2020-06-05 22:19:44,820: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:19:44,822: Building vocab_sampler from config
-2020-06-05 22:19:44,822:  >> # examples= 34323
-2020-06-05 22:19:44,822:  >> batch_size= 1000
-2020-06-05 22:19:44,823:  >> shuffle= False
-2020-06-05 22:19:44,830:  >> BatchSampler; 35 batches
-2020-06-05 22:19:44,830: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:19:44,911: Building train_data from config
-2020-06-05 22:19:49,646:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:19:49,646:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:19:49,646:  >> stack= False
-2020-06-05 22:19:49,647:  >> seg_durs= (1, None)
-2020-06-05 22:19:49,647:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:19:49,647:  >> input_feat_dim= 108
-2020-06-05 22:19:49,647:  >> input_num_subwords= 45
-2020-06-05 22:19:49,647: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:19:49,647: Building train_sampler from config
-2020-06-05 22:19:49,648:  >> # examples= 9971
-2020-06-05 22:19:49,648:  >> batch_size= 256
-2020-06-05 22:19:49,648:  >> shuffle= True
-2020-06-05 22:19:49,656:  >> BatchSampler; 39 batches
-2020-06-05 22:19:49,656: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:19:49,656: Building dev_data from config
-2020-06-05 22:19:56,177: 
+2020-06-07 10:12:41,809: Using CPU
+2020-06-07 10:12:41,809: Machine: 0 / 1
+2020-06-07 10:12:41,810: Hyperparam tuning-------------------
+2020-06-07 10:12:41,810: optim_lr: 0.001
+2020-06-07 10:12:41,810: dropout (for both): 0.4
+2020-06-07 10:12:41,810: margin: 0.4
+2020-06-07 10:12:41,810: ------------------------------------
+2020-06-07 10:12:41,812: Calling main function: multiview_trainer.train
+2020-06-07 10:12:41,812: Using config file: train_config.json
+2020-06-07 10:12:41,812: Using module at multiview_trainer.train
+2020-06-07 10:12:42,067: Using module at multiview_vocab.MultiViewVocab
+2020-06-07 10:12:42,068: Building vocab_data from config
+2020-06-07 10:12:42,361:  >> min_count= 0
+2020-06-07 10:12:42,361:  >> # words= 34323 (# removed= 0)
+2020-06-07 10:12:42,361:  >> # subwords= 45
+2020-06-07 10:12:42,362:     [laughter]= 1
+2020-06-07 10:12:42,362:     [noise]= 2
+2020-06-07 10:12:42,362:     [vocalized-noise]= 3
+2020-06-07 10:12:42,362:     aa= 4
+2020-06-07 10:12:42,362:     ae= 5
+2020-06-07 10:12:42,362:     ah= 6
+2020-06-07 10:12:42,362:     ao= 7
+2020-06-07 10:12:42,362:     aw= 8
+2020-06-07 10:12:42,362:     ax= 9
+2020-06-07 10:12:42,363:     ay= 10
+2020-06-07 10:12:42,363:     b= 11
+2020-06-07 10:12:42,363:     ch= 12
+2020-06-07 10:12:42,363:     d= 13
+2020-06-07 10:12:42,363:     dh= 14
+2020-06-07 10:12:42,363:     eh= 15
+2020-06-07 10:12:42,363:     el= 16
+2020-06-07 10:12:42,363:     en= 17
+2020-06-07 10:12:42,363:     er= 18
+2020-06-07 10:12:42,363:     ey= 19
+2020-06-07 10:12:42,363:     f= 20
+2020-06-07 10:12:42,364:     g= 21
+2020-06-07 10:12:42,364:     hh= 22
+2020-06-07 10:12:42,364:     ih= 23
+2020-06-07 10:12:42,364:     iy= 24
+2020-06-07 10:12:42,364:     jh= 25
+2020-06-07 10:12:42,364:     k= 26
+2020-06-07 10:12:42,364:     l= 27
+2020-06-07 10:12:42,364:     m= 28
+2020-06-07 10:12:42,364:     n= 29
+2020-06-07 10:12:42,364:     ng= 30
+2020-06-07 10:12:42,365:     ow= 31
+2020-06-07 10:12:42,365:     oy= 32
+2020-06-07 10:12:42,365:     p= 33
+2020-06-07 10:12:42,365:     r= 34
+2020-06-07 10:12:42,365:     s= 35
+2020-06-07 10:12:42,365:     sh= 36
+2020-06-07 10:12:42,365:     t= 37
+2020-06-07 10:12:42,365:     th= 38
+2020-06-07 10:12:42,365:     uh= 39
+2020-06-07 10:12:42,365:     uw= 40
+2020-06-07 10:12:42,365:     v= 41
+2020-06-07 10:12:42,366:     w= 42
+2020-06-07 10:12:42,366:     y= 43
+2020-06-07 10:12:42,366:     z= 44
+2020-06-07 10:12:42,366:     zh= 45
+2020-06-07 10:12:42,382: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:12:42,382: Building vocab_sampler from config
+2020-06-07 10:12:42,383:  >> # examples= 34323
+2020-06-07 10:12:42,383:  >> batch_size= 1000
+2020-06-07 10:12:42,383:  >> shuffle= False
+2020-06-07 10:12:42,391:  >> BatchSampler; 35 batches
+2020-06-07 10:12:42,391: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:12:42,503: Building train_data from config
+2020-06-07 10:12:51,607:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.train.hdf5
+2020-06-07 10:12:51,607:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.train.hdf5
+2020-06-07 10:12:51,607:  >> stack= False
+2020-06-07 10:12:51,607:  >> seg_durs= (1, None)
+2020-06-07 10:12:51,607:  >> # words= 9971 (# ignored= 0)
+2020-06-07 10:12:51,607:  >> input_feat_dim= 108
+2020-06-07 10:12:51,607:  >> input_num_subwords= 45
+2020-06-07 10:12:51,607: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:12:51,608: Building train_sampler from config
+2020-06-07 10:12:51,608:  >> # examples= 9971
+2020-06-07 10:12:51,608:  >> batch_size= 256
+2020-06-07 10:12:51,608:  >> shuffle= True
+2020-06-07 10:12:51,618:  >> BatchSampler; 39 batches
+2020-06-07 10:12:51,619: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:12:51,619: Building dev_data from config
+2020-06-07 10:13:03,836:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.dev.hdf5
+2020-06-07 10:13:03,837:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.dev.hdf5
+2020-06-07 10:13:03,837:  >> stack= False
+2020-06-07 10:13:03,837:  >> seg_durs= (1, None)
+2020-06-07 10:13:03,838:  >> # words= 10966 (# ignored= 0)
+2020-06-07 10:13:03,838:  >> input_feat_dim= 108
+2020-06-07 10:13:03,838:  >> input_num_subwords= 45
+2020-06-07 10:13:03,839: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:13:03,839: Building dev_sampler from config
+2020-06-07 10:13:03,839:  >> # examples= 10966
+2020-06-07 10:13:03,840:  >> batch_size= 256
+2020-06-07 10:13:03,840:  >> shuffle= False
+2020-06-07 10:13:03,843:  >> BatchSampler; 43 batches
+2020-06-07 10:13:03,843: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:13:03,843: Building test_data from config
+2020-06-07 10:13:14,543:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.test.hdf5
+2020-06-07 10:13:14,544:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.test.hdf5
+2020-06-07 10:13:14,544:  >> stack= False
+2020-06-07 10:13:14,544:  >> seg_durs= (1, None)
+2020-06-07 10:13:14,544:  >> # words= 11024 (# ignored= 0)
+2020-06-07 10:13:14,544:  >> input_feat_dim= 108
+2020-06-07 10:13:14,544:  >> input_num_subwords= 45
+2020-06-07 10:13:14,544: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:13:14,544: Building test_sampler from config
+2020-06-07 10:13:14,545:  >> # examples= 11024
+2020-06-07 10:13:14,545:  >> batch_size= 256
+2020-06-07 10:13:14,545:  >> shuffle= False
+2020-06-07 10:13:14,548:  >> BatchSampler; 44 batches
+2020-06-07 10:13:14,548: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
+2020-06-07 10:13:14,609: Building loss from config
+2020-06-07 10:13:14,609:  >> margin= 0.4
+2020-06-07 10:13:14,610:  >> k= 16
+2020-06-07 10:13:14,610:  >> min_k= 8
+2020-06-07 10:13:14,610:  >> extra= 0
+2020-06-07 10:13:14,610:  >> average= False
+2020-06-07 10:13:14,610: Using module at metric.multiview_ap.MultiViewAP
+2020-06-07 10:13:14,665: Building eval from config
+2020-06-07 10:13:14,666:  >> acoustic_ap= True
+2020-06-07 10:13:14,666:  >> crossview_ap= True
+2020-06-07 10:13:14,666:  >> full_vocab= False
+2020-06-07 10:13:14,666:  >> metric= crossview_ap
+2020-06-07 10:13:14,666:  >> mode= max
+2020-06-07 10:13:14,666: Using module at multiview_rnn.MultiViewRNN
+2020-06-07 10:13:14,668: Building net from config
+2020-06-07 10:13:14,669: view1:
+2020-06-07 10:13:14,669:  >> cell= GRU
+2020-06-07 10:13:14,669:  >> input_size= 108
+2020-06-07 10:13:14,670:  >> hidden_size= 512
+2020-06-07 10:13:14,670:  >> bidirectional= True
+2020-06-07 10:13:14,670:  >> num_layers= 6
+2020-06-07 10:13:14,670:  >> dropout between layers= 0.4
+2020-06-07 10:13:14,958: view2:
+2020-06-07 10:13:14,959:  >> cell= GRU
+2020-06-07 10:13:14,959:  >> input_size= 64
+2020-06-07 10:13:14,960:  >> hidden_size= 512
+2020-06-07 10:13:14,960:  >> bidirectional= True
+2020-06-07 10:13:14,960:  >> num_layers= 2
+2020-06-07 10:13:14,961:  >> dropout between layers= 0.4
+2020-06-07 10:13:14,961:  >> num input embeddings= 45
+2020-06-07 10:13:15,077: Using module at optim.adam.Adam
+2020-06-07 10:13:15,078: Building optim from config
+2020-06-07 10:13:15,079:  >> lr= 0.001
+2020-06-07 10:13:15,079:  >> betas= (0.9, 0.999)
+2020-06-07 10:13:15,079:  >> eps= 1e-08
+2020-06-07 10:13:15,079:  >> weight_decay= 0
+2020-06-07 10:13:15,079:  >> amsgrad= False
+2020-06-07 10:13:15,080:  >> min_lr= 1e-07
+2020-06-07 10:13:15,081: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
+2020-06-07 10:13:15,082: Building sched from config
+2020-06-07 10:13:15,083:  >> optim= Adam
+2020-06-07 10:13:15,083:  >> decay lr by 0.1
+2020-06-07 10:13:15,083:  >> eval_fn= MultiViewAP
+2020-06-07 10:13:15,084:  >> patience=4
+2020-06-07 10:13:15,084:  >> revert=True
+2020-06-07 10:13:15,084: epoch=0.00 global_step=0 lr=0.001 start_iter=0
+2020-06-07 10:13:15,084: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
+2020-06-07 10:14:51,102: 
 
 Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:19:56,177: Using 1 GPU(s)
-2020-06-05 22:19:56,177: Machine: 0 / 1
-2020-06-05 22:19:56,178: Hyperparam tuning-------------------
-2020-06-05 22:19:56,178: optim_lr: 0.001
-2020-06-05 22:19:56,178: dropout (for both): 0.4
-2020-06-05 22:19:56,179: margin: 0.4
-2020-06-05 22:19:56,179: ------------------------------------
-2020-06-05 22:19:56,180: Calling main function: multiview_trainer.train
-2020-06-05 22:19:56,180: Using config file: train_config.json
-2020-06-05 22:19:56,180: Using module at multiview_trainer.train
-2020-06-05 22:19:56,319: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:19:56,323: Building vocab_data from config
-2020-06-05 22:19:56,533:  >> min_count= 0
-2020-06-05 22:19:56,533:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:19:56,533:  >> # subwords= 45
-2020-06-05 22:19:56,533:     [laughter]= 1
-2020-06-05 22:19:56,533:     [noise]= 2
-2020-06-05 22:19:56,534:     [vocalized-noise]= 3
-2020-06-05 22:19:56,534:     aa= 4
-2020-06-05 22:19:56,534:     ae= 5
-2020-06-05 22:19:56,534:     ah= 6
-2020-06-05 22:19:56,534:     ao= 7
-2020-06-05 22:19:56,534:     aw= 8
-2020-06-05 22:19:56,534:     ax= 9
-2020-06-05 22:19:56,535:     ay= 10
-2020-06-05 22:19:56,535:     b= 11
-2020-06-05 22:19:56,535:     ch= 12
-2020-06-05 22:19:56,535:     d= 13
-2020-06-05 22:19:56,535:     dh= 14
-2020-06-05 22:19:56,535:     eh= 15
-2020-06-05 22:19:56,535:     el= 16
-2020-06-05 22:19:56,536:     en= 17
-2020-06-05 22:19:56,536:     er= 18
-2020-06-05 22:19:56,536:     ey= 19
-2020-06-05 22:19:56,536:     f= 20
-2020-06-05 22:19:56,536:     g= 21
-2020-06-05 22:19:56,536:     hh= 22
-2020-06-05 22:19:56,536:     ih= 23
-2020-06-05 22:19:56,537:     iy= 24
-2020-06-05 22:19:56,537:     jh= 25
-2020-06-05 22:19:56,537:     k= 26
-2020-06-05 22:19:56,537:     l= 27
-2020-06-05 22:19:56,537:     m= 28
-2020-06-05 22:19:56,537:     n= 29
-2020-06-05 22:19:56,537:     ng= 30
-2020-06-05 22:19:56,538:     ow= 31
-2020-06-05 22:19:56,538:     oy= 32
-2020-06-05 22:19:56,538:     p= 33
-2020-06-05 22:19:56,538:     r= 34
-2020-06-05 22:19:56,538:     s= 35
-2020-06-05 22:19:56,538:     sh= 36
-2020-06-05 22:19:56,538:     t= 37
-2020-06-05 22:19:56,539:     th= 38
-2020-06-05 22:19:56,539:     uh= 39
-2020-06-05 22:19:56,539:     uw= 40
-2020-06-05 22:19:56,539:     v= 41
-2020-06-05 22:19:56,539:     w= 42
-2020-06-05 22:19:56,539:     y= 43
-2020-06-05 22:19:56,539:     z= 44
-2020-06-05 22:19:56,540:     zh= 45
-2020-06-05 22:19:56,552: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:19:56,553: Building vocab_sampler from config
-2020-06-05 22:19:56,553:  >> # examples= 34323
-2020-06-05 22:19:56,553:  >> batch_size= 1000
-2020-06-05 22:19:56,554:  >> shuffle= False
-2020-06-05 22:19:56,561:  >> BatchSampler; 35 batches
-2020-06-05 22:19:56,561: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:19:56,624: Building train_data from config
-2020-06-05 22:20:01,406:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:20:01,406:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:20:01,407:  >> stack= False
-2020-06-05 22:20:01,407:  >> seg_durs= (1, None)
-2020-06-05 22:20:01,407:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:20:01,407:  >> input_feat_dim= 108
-2020-06-05 22:20:01,407:  >> input_num_subwords= 45
-2020-06-05 22:20:01,407: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:20:01,407: Building train_sampler from config
-2020-06-05 22:20:01,408:  >> # examples= 9971
-2020-06-05 22:20:01,408:  >> batch_size= 256
-2020-06-05 22:20:01,408:  >> shuffle= True
-2020-06-05 22:20:01,416:  >> BatchSampler; 39 batches
-2020-06-05 22:20:01,416: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:20:01,417: Building dev_data from config
-2020-06-05 22:20:06,976:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 22:20:06,976:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 22:20:06,976:  >> stack= False
-2020-06-05 22:20:06,976:  >> seg_durs= (1, None)
-2020-06-05 22:20:06,976:  >> # words= 10966 (# ignored= 0)
-2020-06-05 22:20:06,976:  >> input_feat_dim= 108
-2020-06-05 22:20:06,976:  >> input_num_subwords= 45
-2020-06-05 22:20:06,976: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:20:06,976: Building dev_sampler from config
-2020-06-05 22:20:06,977:  >> # examples= 10966
-2020-06-05 22:20:06,977:  >> batch_size= 256
-2020-06-05 22:20:06,977:  >> shuffle= False
-2020-06-05 22:20:06,979:  >> BatchSampler; 43 batches
-2020-06-05 22:20:06,979: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:20:06,979: Building test_data from config
-2020-06-05 22:20:11,848:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 22:20:11,848:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 22:20:11,848:  >> stack= False
-2020-06-05 22:20:11,848:  >> seg_durs= (1, None)
-2020-06-05 22:20:11,848:  >> # words= 11024 (# ignored= 0)
-2020-06-05 22:20:11,848:  >> input_feat_dim= 108
-2020-06-05 22:20:11,848:  >> input_num_subwords= 45
-2020-06-05 22:20:11,848: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:20:11,849: Building test_sampler from config
-2020-06-05 22:20:11,849:  >> # examples= 11024
-2020-06-05 22:20:11,849:  >> batch_size= 256
-2020-06-05 22:20:11,849:  >> shuffle= False
-2020-06-05 22:20:11,851:  >> BatchSampler; 44 batches
-2020-06-05 22:20:11,851: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 22:20:11,863: Building loss from config
-2020-06-05 22:20:11,864:  >> margin= 0.4
-2020-06-05 22:20:11,864:  >> k= 16
-2020-06-05 22:20:11,864:  >> min_k= 8
-2020-06-05 22:20:11,864:  >> extra= 0
-2020-06-05 22:20:11,864:  >> average= False
-2020-06-05 22:20:11,872: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 22:20:11,914: Building eval from config
-2020-06-05 22:20:11,915:  >> acoustic_ap= True
-2020-06-05 22:20:11,915:  >> crossview_ap= True
-2020-06-05 22:20:11,915:  >> full_vocab= False
-2020-06-05 22:20:11,915:  >> metric= crossview_ap
-2020-06-05 22:20:11,915:  >> mode= max
-2020-06-05 22:20:11,915: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 22:20:11,925: Building net from config
-2020-06-05 22:20:11,926: view1:
-2020-06-05 22:20:11,927:  >> cell= GRU
-2020-06-05 22:20:11,927:  >> input_size= 108
-2020-06-05 22:20:11,927:  >> hidden_size= 512
-2020-06-05 22:20:11,928:  >> bidirectional= True
-2020-06-05 22:20:11,928:  >> num_layers= 6
-2020-06-05 22:20:11,928:  >> dropout between layers= 0.4
-2020-06-05 22:20:12,120: view2:
-2020-06-05 22:20:12,120:  >> cell= GRU
-2020-06-05 22:20:12,120:  >> input_size= 64
-2020-06-05 22:20:12,121:  >> hidden_size= 512
-2020-06-05 22:20:12,121:  >> bidirectional= True
-2020-06-05 22:20:12,121:  >> num_layers= 2
-2020-06-05 22:20:12,121:  >> dropout between layers= 0.4
-2020-06-05 22:20:12,121:  >> num input embeddings= 45
-2020-06-05 22:20:12,171: Using module at optim.adam.Adam
-2020-06-05 22:20:12,173: Building optim from config
-2020-06-05 22:20:12,174:  >> lr= 0.001
-2020-06-05 22:20:12,174:  >> betas= (0.9, 0.999)
-2020-06-05 22:20:12,174:  >> eps= 1e-08
-2020-06-05 22:20:12,174:  >> weight_decay= 0
-2020-06-05 22:20:12,174:  >> amsgrad= False
-2020-06-05 22:20:12,174:  >> min_lr= 1e-07
-2020-06-05 22:20:12,175: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 22:20:12,181: Building sched from config
-2020-06-05 22:20:12,182:  >> optim= Adam
-2020-06-05 22:20:12,182:  >> decay lr by 0.1
-2020-06-05 22:20:12,182:  >> eval_fn= MultiViewAP
-2020-06-05 22:20:12,183:  >> patience=4
-2020-06-05 22:20:12,183:  >> revert=True
-2020-06-05 22:20:12,183: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 22:20:12,183: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 22:20:44,652: 
+2020-06-07 10:14:51,102: Using CPU
+2020-06-07 10:14:51,102: Machine: 0 / 1
+2020-06-07 10:14:51,103: Hyperparam tuning-------------------
+2020-06-07 10:14:51,103: optim_lr: 0.001
+2020-06-07 10:14:51,103: dropout (for both): 0.4
+2020-06-07 10:14:51,103: margin: 0.4
+2020-06-07 10:14:51,104: ------------------------------------
+2020-06-07 10:14:51,106: Calling main function: multiview_trainer.train
+2020-06-07 10:14:51,106: Using config file: train_config.json
+2020-06-07 10:14:51,106: Using module at multiview_trainer.train
+2020-06-07 10:14:51,377: Using module at multiview_vocab.MultiViewVocab
+2020-06-07 10:14:51,378: Building vocab_data from config
+2020-06-07 10:14:51,684:  >> min_count= 0
+2020-06-07 10:14:51,684:  >> # words= 34323 (# removed= 0)
+2020-06-07 10:14:51,684:  >> # subwords= 45
+2020-06-07 10:14:51,684:     [laughter]= 1
+2020-06-07 10:14:51,684:     [noise]= 2
+2020-06-07 10:14:51,685:     [vocalized-noise]= 3
+2020-06-07 10:14:51,685:     aa= 4
+2020-06-07 10:14:51,685:     ae= 5
+2020-06-07 10:14:51,685:     ah= 6
+2020-06-07 10:14:51,685:     ao= 7
+2020-06-07 10:14:51,685:     aw= 8
+2020-06-07 10:14:51,685:     ax= 9
+2020-06-07 10:14:51,685:     ay= 10
+2020-06-07 10:14:51,685:     b= 11
+2020-06-07 10:14:51,686:     ch= 12
+2020-06-07 10:14:51,686:     d= 13
+2020-06-07 10:14:51,686:     dh= 14
+2020-06-07 10:14:51,686:     eh= 15
+2020-06-07 10:14:51,686:     el= 16
+2020-06-07 10:14:51,686:     en= 17
+2020-06-07 10:14:51,686:     er= 18
+2020-06-07 10:14:51,686:     ey= 19
+2020-06-07 10:14:51,686:     f= 20
+2020-06-07 10:14:51,686:     g= 21
+2020-06-07 10:14:51,687:     hh= 22
+2020-06-07 10:14:51,687:     ih= 23
+2020-06-07 10:14:51,687:     iy= 24
+2020-06-07 10:14:51,687:     jh= 25
+2020-06-07 10:14:51,687:     k= 26
+2020-06-07 10:14:51,687:     l= 27
+2020-06-07 10:14:51,687:     m= 28
+2020-06-07 10:14:51,687:     n= 29
+2020-06-07 10:14:51,687:     ng= 30
+2020-06-07 10:14:51,687:     ow= 31
+2020-06-07 10:14:51,687:     oy= 32
+2020-06-07 10:14:51,688:     p= 33
+2020-06-07 10:14:51,688:     r= 34
+2020-06-07 10:14:51,688:     s= 35
+2020-06-07 10:14:51,688:     sh= 36
+2020-06-07 10:14:51,688:     t= 37
+2020-06-07 10:14:51,688:     th= 38
+2020-06-07 10:14:51,688:     uh= 39
+2020-06-07 10:14:51,688:     uw= 40
+2020-06-07 10:14:51,688:     v= 41
+2020-06-07 10:14:51,688:     w= 42
+2020-06-07 10:14:51,689:     y= 43
+2020-06-07 10:14:51,689:     z= 44
+2020-06-07 10:14:51,689:     zh= 45
+2020-06-07 10:14:51,705: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:14:51,706: Building vocab_sampler from config
+2020-06-07 10:14:51,707:  >> # examples= 34323
+2020-06-07 10:14:51,707:  >> batch_size= 1000
+2020-06-07 10:14:51,707:  >> shuffle= False
+2020-06-07 10:14:51,715:  >> BatchSampler; 35 batches
+2020-06-07 10:14:51,715: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:14:51,818: Building train_data from config
+2020-06-07 10:15:03,136:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.train.hdf5
+2020-06-07 10:15:03,136:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.train.hdf5
+2020-06-07 10:15:03,137:  >> stack= False
+2020-06-07 10:15:03,137:  >> seg_durs= (1, None)
+2020-06-07 10:15:03,137:  >> # words= 9971 (# ignored= 0)
+2020-06-07 10:15:03,137:  >> input_feat_dim= 108
+2020-06-07 10:15:03,138:  >> input_num_subwords= 45
+2020-06-07 10:15:03,139: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:15:03,139: Building train_sampler from config
+2020-06-07 10:15:03,139:  >> # examples= 9971
+2020-06-07 10:15:03,140:  >> batch_size= 256
+2020-06-07 10:15:03,140:  >> shuffle= True
+2020-06-07 10:15:03,155:  >> BatchSampler; 39 batches
+2020-06-07 10:15:03,155: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:15:03,156: Building dev_data from config
+2020-06-07 10:15:16,404:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.dev.hdf5
+2020-06-07 10:15:16,405:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.dev.hdf5
+2020-06-07 10:15:16,405:  >> stack= False
+2020-06-07 10:15:16,405:  >> seg_durs= (1, None)
+2020-06-07 10:15:16,405:  >> # words= 10966 (# ignored= 0)
+2020-06-07 10:15:16,405:  >> input_feat_dim= 108
+2020-06-07 10:15:16,405:  >> input_num_subwords= 45
+2020-06-07 10:15:16,405: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:15:16,406: Building dev_sampler from config
+2020-06-07 10:15:16,406:  >> # examples= 10966
+2020-06-07 10:15:16,406:  >> batch_size= 256
+2020-06-07 10:15:16,406:  >> shuffle= False
+2020-06-07 10:15:16,409:  >> BatchSampler; 43 batches
+2020-06-07 10:15:16,409: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:15:16,409: Building test_data from config
+2020-06-07 10:15:28,654:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.test.hdf5
+2020-06-07 10:15:28,655:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.test.hdf5
+2020-06-07 10:15:28,655:  >> stack= False
+2020-06-07 10:15:28,655:  >> seg_durs= (1, None)
+2020-06-07 10:15:28,655:  >> # words= 11024 (# ignored= 0)
+2020-06-07 10:15:28,655:  >> input_feat_dim= 108
+2020-06-07 10:15:28,655:  >> input_num_subwords= 45
+2020-06-07 10:15:28,656: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:15:28,656: Building test_sampler from config
+2020-06-07 10:15:28,656:  >> # examples= 11024
+2020-06-07 10:15:28,657:  >> batch_size= 256
+2020-06-07 10:15:28,657:  >> shuffle= False
+2020-06-07 10:15:28,661:  >> BatchSampler; 44 batches
+2020-06-07 10:15:28,662: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
+2020-06-07 10:15:28,704: Building loss from config
+2020-06-07 10:15:28,705:  >> margin= 0.4
+2020-06-07 10:15:28,705:  >> k= 16
+2020-06-07 10:15:28,705:  >> min_k= 8
+2020-06-07 10:15:28,705:  >> extra= 0
+2020-06-07 10:15:28,705:  >> average= False
+2020-06-07 10:15:28,706: Using module at metric.multiview_ap.MultiViewAP
+2020-06-07 10:15:28,757: Building eval from config
+2020-06-07 10:15:28,758:  >> acoustic_ap= True
+2020-06-07 10:15:28,758:  >> crossview_ap= True
+2020-06-07 10:15:28,758:  >> full_vocab= False
+2020-06-07 10:15:28,758:  >> metric= crossview_ap
+2020-06-07 10:15:28,758:  >> mode= max
+2020-06-07 10:15:28,758: Using module at multiview_rnn.MultiViewRNN
+2020-06-07 10:15:28,760: Building net from config
+2020-06-07 10:15:28,761: view1:
+2020-06-07 10:15:28,761:  >> cell= GRU
+2020-06-07 10:15:28,761:  >> input_size= 108
+2020-06-07 10:15:28,762:  >> hidden_size= 512
+2020-06-07 10:15:28,762:  >> bidirectional= True
+2020-06-07 10:15:28,762:  >> num_layers= 6
+2020-06-07 10:15:28,762:  >> dropout between layers= 0.4
+2020-06-07 10:15:29,159: view2:
+2020-06-07 10:15:29,159:  >> cell= GRU
+2020-06-07 10:15:29,160:  >> input_size= 64
+2020-06-07 10:15:29,160:  >> hidden_size= 512
+2020-06-07 10:15:29,160:  >> bidirectional= True
+2020-06-07 10:15:29,160:  >> num_layers= 2
+2020-06-07 10:15:29,160:  >> dropout between layers= 0.4
+2020-06-07 10:15:29,160:  >> num input embeddings= 45
+2020-06-07 10:15:29,234: Using module at optim.adam.Adam
+2020-06-07 10:15:29,235: Building optim from config
+2020-06-07 10:15:29,236:  >> lr= 0.001
+2020-06-07 10:15:29,236:  >> betas= (0.9, 0.999)
+2020-06-07 10:15:29,236:  >> eps= 1e-08
+2020-06-07 10:15:29,236:  >> weight_decay= 0
+2020-06-07 10:15:29,236:  >> amsgrad= False
+2020-06-07 10:15:29,236:  >> min_lr= 1e-07
+2020-06-07 10:15:29,237: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
+2020-06-07 10:15:29,238: Building sched from config
+2020-06-07 10:15:29,238:  >> optim= Adam
+2020-06-07 10:15:29,238:  >> decay lr by 0.1
+2020-06-07 10:15:29,238:  >> eval_fn= MultiViewAP
+2020-06-07 10:15:29,239:  >> patience=4
+2020-06-07 10:15:29,239:  >> revert=True
+2020-06-07 10:15:29,239: epoch=0.00 global_step=0 lr=0.001 start_iter=0
+2020-06-07 10:15:29,239: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
+2020-06-07 10:21:05,930: 
 
 Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:20:44,652: Using 1 GPU(s)
-2020-06-05 22:20:44,652: Machine: 0 / 1
-2020-06-05 22:20:44,653: Hyperparam tuning-------------------
-2020-06-05 22:20:44,653: optim_lr: 0.001
-2020-06-05 22:20:44,653: dropout (for both): 0.4
-2020-06-05 22:20:44,653: margin: 0.4
-2020-06-05 22:20:44,654: ------------------------------------
-2020-06-05 22:20:44,655: Calling main function: multiview_trainer.train
-2020-06-05 22:20:44,655: Using config file: train_config.json
-2020-06-05 22:20:44,655: Using module at multiview_trainer.train
-2020-06-05 22:20:44,779: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:20:44,783: Building vocab_data from config
-2020-06-05 22:20:44,995:  >> min_count= 0
-2020-06-05 22:20:44,995:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:20:44,995:  >> # subwords= 45
-2020-06-05 22:20:44,995:     [laughter]= 1
-2020-06-05 22:20:44,995:     [noise]= 2
-2020-06-05 22:20:44,995:     [vocalized-noise]= 3
-2020-06-05 22:20:44,995:     aa= 4
-2020-06-05 22:20:44,995:     ae= 5
-2020-06-05 22:20:44,996:     ah= 6
-2020-06-05 22:20:44,996:     ao= 7
-2020-06-05 22:20:44,996:     aw= 8
-2020-06-05 22:20:44,996:     ax= 9
-2020-06-05 22:20:44,996:     ay= 10
-2020-06-05 22:20:44,996:     b= 11
-2020-06-05 22:20:44,996:     ch= 12
-2020-06-05 22:20:44,996:     d= 13
-2020-06-05 22:20:44,997:     dh= 14
-2020-06-05 22:20:44,997:     eh= 15
-2020-06-05 22:20:44,997:     el= 16
-2020-06-05 22:20:44,997:     en= 17
-2020-06-05 22:20:44,997:     er= 18
-2020-06-05 22:20:44,997:     ey= 19
-2020-06-05 22:20:44,997:     f= 20
-2020-06-05 22:20:44,997:     g= 21
-2020-06-05 22:20:44,998:     hh= 22
-2020-06-05 22:20:44,998:     ih= 23
-2020-06-05 22:20:44,998:     iy= 24
-2020-06-05 22:20:44,998:     jh= 25
-2020-06-05 22:20:44,998:     k= 26
-2020-06-05 22:20:44,998:     l= 27
-2020-06-05 22:20:44,998:     m= 28
-2020-06-05 22:20:44,998:     n= 29
-2020-06-05 22:20:44,998:     ng= 30
-2020-06-05 22:20:44,999:     ow= 31
-2020-06-05 22:20:44,999:     oy= 32
-2020-06-05 22:20:44,999:     p= 33
-2020-06-05 22:20:44,999:     r= 34
-2020-06-05 22:20:44,999:     s= 35
-2020-06-05 22:20:44,999:     sh= 36
-2020-06-05 22:20:44,999:     t= 37
-2020-06-05 22:20:44,999:     th= 38
-2020-06-05 22:20:45,000:     uh= 39
-2020-06-05 22:20:45,000:     uw= 40
-2020-06-05 22:20:45,000:     v= 41
-2020-06-05 22:20:45,000:     w= 42
-2020-06-05 22:20:45,000:     y= 43
-2020-06-05 22:20:45,000:     z= 44
-2020-06-05 22:20:45,000:     zh= 45
-2020-06-05 22:20:45,012: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:20:45,013: Building vocab_sampler from config
-2020-06-05 22:20:45,014:  >> # examples= 34323
-2020-06-05 22:20:45,014:  >> batch_size= 1000
-2020-06-05 22:20:45,014:  >> shuffle= False
-2020-06-05 22:20:45,022:  >> BatchSampler; 35 batches
-2020-06-05 22:20:45,022: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:20:45,079: Building train_data from config
-2020-06-05 22:20:49,837:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:20:49,837:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:20:49,837:  >> stack= False
-2020-06-05 22:20:49,837:  >> seg_durs= (1, None)
-2020-06-05 22:20:49,837:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:20:49,838:  >> input_feat_dim= 108
-2020-06-05 22:20:49,838:  >> input_num_subwords= 45
-2020-06-05 22:20:49,838: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:20:49,838: Building train_sampler from config
-2020-06-05 22:20:49,838:  >> # examples= 9971
-2020-06-05 22:20:49,838:  >> batch_size= 256
-2020-06-05 22:20:49,839:  >> shuffle= True
-2020-06-05 22:20:49,847:  >> BatchSampler; 39 batches
-2020-06-05 22:20:49,847: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:20:49,847: Building dev_data from config
-2020-06-05 22:20:55,319:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 22:20:55,320:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 22:20:55,320:  >> stack= False
-2020-06-05 22:20:55,320:  >> seg_durs= (1, None)
-2020-06-05 22:20:55,320:  >> # words= 10966 (# ignored= 0)
-2020-06-05 22:20:55,320:  >> input_feat_dim= 108
-2020-06-05 22:20:55,320:  >> input_num_subwords= 45
-2020-06-05 22:20:55,320: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:20:55,320: Building dev_sampler from config
-2020-06-05 22:20:55,321:  >> # examples= 10966
-2020-06-05 22:20:55,321:  >> batch_size= 256
-2020-06-05 22:20:55,321:  >> shuffle= False
-2020-06-05 22:20:55,323:  >> BatchSampler; 43 batches
-2020-06-05 22:20:55,323: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:20:55,323: Building test_data from config
-2020-06-05 22:21:00,173:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 22:21:00,173:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 22:21:00,173:  >> stack= False
-2020-06-05 22:21:00,174:  >> seg_durs= (1, None)
-2020-06-05 22:21:00,174:  >> # words= 11024 (# ignored= 0)
-2020-06-05 22:21:00,174:  >> input_feat_dim= 108
-2020-06-05 22:21:00,174:  >> input_num_subwords= 45
-2020-06-05 22:21:00,174: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:21:00,174: Building test_sampler from config
-2020-06-05 22:21:00,174:  >> # examples= 11024
-2020-06-05 22:21:00,175:  >> batch_size= 256
-2020-06-05 22:21:00,175:  >> shuffle= False
-2020-06-05 22:21:00,177:  >> BatchSampler; 44 batches
-2020-06-05 22:21:00,177: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 22:21:00,186: Building loss from config
-2020-06-05 22:21:00,186:  >> margin= 0.4
-2020-06-05 22:21:00,187:  >> k= 16
-2020-06-05 22:21:00,187:  >> min_k= 8
-2020-06-05 22:21:00,187:  >> extra= 0
-2020-06-05 22:21:00,187:  >> average= False
-2020-06-05 22:21:00,196: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 22:21:00,216: Building eval from config
-2020-06-05 22:21:00,217:  >> acoustic_ap= True
-2020-06-05 22:21:00,217:  >> crossview_ap= True
-2020-06-05 22:21:00,217:  >> full_vocab= False
-2020-06-05 22:21:00,217:  >> metric= crossview_ap
-2020-06-05 22:21:00,217:  >> mode= max
-2020-06-05 22:21:00,217: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 22:21:00,221: Building net from config
-2020-06-05 22:21:00,222: view1:
-2020-06-05 22:21:00,223:  >> cell= GRU
-2020-06-05 22:21:00,223:  >> input_size= 108
-2020-06-05 22:21:00,223:  >> hidden_size= 512
-2020-06-05 22:21:00,223:  >> bidirectional= True
-2020-06-05 22:21:00,224:  >> num_layers= 6
-2020-06-05 22:21:00,224:  >> dropout between layers= 0.4
-2020-06-05 22:21:00,415: view2:
-2020-06-05 22:21:00,416:  >> cell= GRU
-2020-06-05 22:21:00,416:  >> input_size= 64
-2020-06-05 22:21:00,416:  >> hidden_size= 512
-2020-06-05 22:21:00,416:  >> bidirectional= True
-2020-06-05 22:21:00,416:  >> num_layers= 2
-2020-06-05 22:21:00,416:  >> dropout between layers= 0.4
-2020-06-05 22:21:00,416:  >> num input embeddings= 45
-2020-06-05 22:21:00,469: Using module at optim.adam.Adam
-2020-06-05 22:21:00,470: Building optim from config
-2020-06-05 22:21:00,470:  >> lr= 0.001
-2020-06-05 22:21:00,471:  >> betas= (0.9, 0.999)
-2020-06-05 22:21:00,471:  >> eps= 1e-08
-2020-06-05 22:21:00,471:  >> weight_decay= 0
-2020-06-05 22:21:00,471:  >> amsgrad= False
-2020-06-05 22:21:00,471:  >> min_lr= 1e-07
-2020-06-05 22:21:00,472: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 22:21:00,474: Building sched from config
-2020-06-05 22:21:00,475:  >> optim= Adam
-2020-06-05 22:21:00,475:  >> decay lr by 0.1
-2020-06-05 22:21:00,475:  >> eval_fn= MultiViewAP
-2020-06-05 22:21:00,475:  >> patience=4
-2020-06-05 22:21:00,476:  >> revert=True
-2020-06-05 22:21:00,476: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 22:21:00,476: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 22:24:37,518: 
-
-Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:24:37,519: Using 1 GPU(s)
-2020-06-05 22:24:37,519: Machine: 0 / 1
-2020-06-05 22:24:37,520: Hyperparam tuning-------------------
-2020-06-05 22:24:37,520: optim_lr: 0.001
-2020-06-05 22:24:37,520: dropout (for both): 0.4
-2020-06-05 22:24:37,521: margin: 0.4
-2020-06-05 22:24:37,521: ------------------------------------
-2020-06-05 22:24:37,524: Calling main function: multiview_trainer.train
-2020-06-05 22:24:37,524: Using config file: train_config.json
-2020-06-05 22:24:37,524: Using module at multiview_trainer.train
-2020-06-05 22:24:37,775: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:24:37,780: Building vocab_data from config
-2020-06-05 22:24:37,994:  >> min_count= 0
-2020-06-05 22:24:37,995:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:24:37,995:  >> # subwords= 45
-2020-06-05 22:24:37,995:     [laughter]= 1
-2020-06-05 22:24:37,995:     [noise]= 2
-2020-06-05 22:24:37,995:     [vocalized-noise]= 3
-2020-06-05 22:24:37,995:     aa= 4
-2020-06-05 22:24:37,996:     ae= 5
-2020-06-05 22:24:37,996:     ah= 6
-2020-06-05 22:24:37,996:     ao= 7
-2020-06-05 22:24:37,996:     aw= 8
-2020-06-05 22:24:37,996:     ax= 9
-2020-06-05 22:24:37,996:     ay= 10
-2020-06-05 22:24:37,996:     b= 11
-2020-06-05 22:24:37,996:     ch= 12
-2020-06-05 22:24:37,997:     d= 13
-2020-06-05 22:24:37,997:     dh= 14
-2020-06-05 22:24:37,997:     eh= 15
-2020-06-05 22:24:37,997:     el= 16
-2020-06-05 22:24:37,997:     en= 17
-2020-06-05 22:24:37,997:     er= 18
-2020-06-05 22:24:37,997:     ey= 19
-2020-06-05 22:24:37,998:     f= 20
-2020-06-05 22:24:37,998:     g= 21
-2020-06-05 22:24:37,998:     hh= 22
-2020-06-05 22:24:37,998:     ih= 23
-2020-06-05 22:24:37,998:     iy= 24
-2020-06-05 22:24:37,998:     jh= 25
-2020-06-05 22:24:37,999:     k= 26
-2020-06-05 22:24:37,999:     l= 27
-2020-06-05 22:24:37,999:     m= 28
-2020-06-05 22:24:37,999:     n= 29
-2020-06-05 22:24:37,999:     ng= 30
-2020-06-05 22:24:37,999:     ow= 31
-2020-06-05 22:24:37,999:     oy= 32
-2020-06-05 22:24:37,999:     p= 33
-2020-06-05 22:24:38,000:     r= 34
-2020-06-05 22:24:38,000:     s= 35
-2020-06-05 22:24:38,000:     sh= 36
-2020-06-05 22:24:38,000:     t= 37
-2020-06-05 22:24:38,000:     th= 38
-2020-06-05 22:24:38,000:     uh= 39
-2020-06-05 22:24:38,000:     uw= 40
-2020-06-05 22:24:38,001:     v= 41
-2020-06-05 22:24:38,001:     w= 42
-2020-06-05 22:24:38,001:     y= 43
-2020-06-05 22:24:38,001:     z= 44
-2020-06-05 22:24:38,001:     zh= 45
-2020-06-05 22:24:38,013: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:24:38,015: Building vocab_sampler from config
-2020-06-05 22:24:38,015:  >> # examples= 34323
-2020-06-05 22:24:38,016:  >> batch_size= 1000
-2020-06-05 22:24:38,016:  >> shuffle= False
-2020-06-05 22:24:38,023:  >> BatchSampler; 35 batches
-2020-06-05 22:24:38,023: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:24:38,127: Building train_data from config
-2020-06-05 22:24:42,883:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:24:42,883:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:24:42,883:  >> stack= False
-2020-06-05 22:24:42,883:  >> seg_durs= (1, None)
-2020-06-05 22:24:42,883:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:24:42,883:  >> input_feat_dim= 108
-2020-06-05 22:24:42,884:  >> input_num_subwords= 45
-2020-06-05 22:24:42,884: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:24:42,884: Building train_sampler from config
-2020-06-05 22:24:42,884:  >> # examples= 9971
-2020-06-05 22:24:42,884:  >> batch_size= 256
-2020-06-05 22:24:42,884:  >> shuffle= True
-2020-06-05 22:24:42,893:  >> BatchSampler; 39 batches
-2020-06-05 22:24:42,893: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:24:42,893: Building dev_data from config
-2020-06-05 22:24:48,412:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 22:24:48,413:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 22:24:48,413:  >> stack= False
-2020-06-05 22:24:48,413:  >> seg_durs= (1, None)
-2020-06-05 22:24:48,413:  >> # words= 10966 (# ignored= 0)
-2020-06-05 22:24:48,413:  >> input_feat_dim= 108
-2020-06-05 22:24:48,413:  >> input_num_subwords= 45
-2020-06-05 22:24:48,413: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:24:48,414: Building dev_sampler from config
-2020-06-05 22:24:48,414:  >> # examples= 10966
-2020-06-05 22:24:48,414:  >> batch_size= 256
-2020-06-05 22:24:48,414:  >> shuffle= False
-2020-06-05 22:24:48,416:  >> BatchSampler; 43 batches
-2020-06-05 22:24:48,416: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:24:48,416: Building test_data from config
-2020-06-05 22:24:53,226:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 22:24:53,226:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 22:24:53,226:  >> stack= False
-2020-06-05 22:24:53,227:  >> seg_durs= (1, None)
-2020-06-05 22:24:53,227:  >> # words= 11024 (# ignored= 0)
-2020-06-05 22:24:53,227:  >> input_feat_dim= 108
-2020-06-05 22:24:53,227:  >> input_num_subwords= 45
-2020-06-05 22:24:53,227: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:24:53,227: Building test_sampler from config
-2020-06-05 22:24:53,228:  >> # examples= 11024
-2020-06-05 22:24:53,228:  >> batch_size= 256
-2020-06-05 22:24:53,228:  >> shuffle= False
-2020-06-05 22:24:53,230:  >> BatchSampler; 44 batches
-2020-06-05 22:24:53,230: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 22:24:53,242: Building loss from config
-2020-06-05 22:24:53,243:  >> margin= 0.4
-2020-06-05 22:24:53,243:  >> k= 16
-2020-06-05 22:24:53,243:  >> min_k= 8
-2020-06-05 22:24:53,243:  >> extra= 0
-2020-06-05 22:24:53,243:  >> average= False
-2020-06-05 22:24:53,252: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 22:24:53,302: Building eval from config
-2020-06-05 22:24:53,302:  >> acoustic_ap= True
-2020-06-05 22:24:53,303:  >> crossview_ap= True
-2020-06-05 22:24:53,303:  >> full_vocab= False
-2020-06-05 22:24:53,303:  >> metric= crossview_ap
-2020-06-05 22:24:53,303:  >> mode= max
-2020-06-05 22:24:53,303: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 22:24:53,314: Building net from config
-2020-06-05 22:24:53,316: view1:
-2020-06-05 22:24:53,317:  >> cell= GRU
-2020-06-05 22:24:53,317:  >> input_size= 108
-2020-06-05 22:24:53,317:  >> hidden_size= 512
-2020-06-05 22:24:53,317:  >> bidirectional= True
-2020-06-05 22:24:53,317:  >> num_layers= 6
-2020-06-05 22:24:53,317:  >> dropout between layers= 0.4
-2020-06-05 22:24:53,520: view2:
-2020-06-05 22:24:53,522:  >> cell= GRU
-2020-06-05 22:24:53,522:  >> input_size= 64
-2020-06-05 22:24:53,522:  >> hidden_size= 512
-2020-06-05 22:24:53,522:  >> bidirectional= True
-2020-06-05 22:24:53,522:  >> num_layers= 2
-2020-06-05 22:24:53,522:  >> dropout between layers= 0.4
-2020-06-05 22:24:53,522:  >> num input embeddings= 45
-2020-06-05 22:24:53,575: Using module at optim.adam.Adam
-2020-06-05 22:24:53,579: Building optim from config
-2020-06-05 22:24:53,579:  >> lr= 0.001
-2020-06-05 22:24:53,579:  >> betas= (0.9, 0.999)
-2020-06-05 22:24:53,579:  >> eps= 1e-08
-2020-06-05 22:24:53,579:  >> weight_decay= 0
-2020-06-05 22:24:53,579:  >> amsgrad= False
-2020-06-05 22:24:53,580:  >> min_lr= 1e-07
-2020-06-05 22:24:53,581: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 22:24:53,587: Building sched from config
-2020-06-05 22:24:53,588:  >> optim= Adam
-2020-06-05 22:24:53,588:  >> decay lr by 0.1
-2020-06-05 22:24:53,588:  >> eval_fn= MultiViewAP
-2020-06-05 22:24:53,589:  >> patience=4
-2020-06-05 22:24:53,589:  >> revert=True
-2020-06-05 22:24:53,589: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 22:24:53,590: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 22:51:37,728: 
-
-Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 22:51:37,728: Using 1 GPU(s)
-2020-06-05 22:51:37,728: Machine: 0 / 1
-2020-06-05 22:51:37,729: Hyperparam tuning-------------------
-2020-06-05 22:51:37,729: optim_lr: 0.001
-2020-06-05 22:51:37,730: dropout (for both): 0.4
-2020-06-05 22:51:37,730: margin: 0.4
-2020-06-05 22:51:37,730: ------------------------------------
-2020-06-05 22:51:37,733: Calling main function: multiview_trainer.train
-2020-06-05 22:51:37,733: Using config file: train_config.json
-2020-06-05 22:51:37,733: Using module at multiview_trainer.train
-2020-06-05 22:51:37,947: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 22:51:37,952: Building vocab_data from config
-2020-06-05 22:51:38,171:  >> min_count= 0
-2020-06-05 22:51:38,171:  >> # words= 34323 (# removed= 0)
-2020-06-05 22:51:38,171:  >> # subwords= 45
-2020-06-05 22:51:38,171:     [laughter]= 1
-2020-06-05 22:51:38,171:     [noise]= 2
-2020-06-05 22:51:38,171:     [vocalized-noise]= 3
-2020-06-05 22:51:38,171:     aa= 4
-2020-06-05 22:51:38,172:     ae= 5
-2020-06-05 22:51:38,172:     ah= 6
-2020-06-05 22:51:38,172:     ao= 7
-2020-06-05 22:51:38,172:     aw= 8
-2020-06-05 22:51:38,172:     ax= 9
-2020-06-05 22:51:38,172:     ay= 10
-2020-06-05 22:51:38,172:     b= 11
-2020-06-05 22:51:38,173:     ch= 12
-2020-06-05 22:51:38,173:     d= 13
-2020-06-05 22:51:38,173:     dh= 14
-2020-06-05 22:51:38,173:     eh= 15
-2020-06-05 22:51:38,173:     el= 16
-2020-06-05 22:51:38,173:     en= 17
-2020-06-05 22:51:38,173:     er= 18
-2020-06-05 22:51:38,174:     ey= 19
-2020-06-05 22:51:38,174:     f= 20
-2020-06-05 22:51:38,174:     g= 21
-2020-06-05 22:51:38,174:     hh= 22
-2020-06-05 22:51:38,174:     ih= 23
-2020-06-05 22:51:38,174:     iy= 24
-2020-06-05 22:51:38,175:     jh= 25
-2020-06-05 22:51:38,175:     k= 26
-2020-06-05 22:51:38,175:     l= 27
-2020-06-05 22:51:38,175:     m= 28
-2020-06-05 22:51:38,175:     n= 29
-2020-06-05 22:51:38,175:     ng= 30
-2020-06-05 22:51:38,175:     ow= 31
-2020-06-05 22:51:38,175:     oy= 32
-2020-06-05 22:51:38,176:     p= 33
-2020-06-05 22:51:38,176:     r= 34
-2020-06-05 22:51:38,176:     s= 35
-2020-06-05 22:51:38,176:     sh= 36
-2020-06-05 22:51:38,176:     t= 37
-2020-06-05 22:51:38,176:     th= 38
-2020-06-05 22:51:38,176:     uh= 39
-2020-06-05 22:51:38,177:     uw= 40
-2020-06-05 22:51:38,177:     v= 41
-2020-06-05 22:51:38,177:     w= 42
-2020-06-05 22:51:38,177:     y= 43
-2020-06-05 22:51:38,177:     z= 44
-2020-06-05 22:51:38,177:     zh= 45
-2020-06-05 22:51:38,189: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:51:38,191: Building vocab_sampler from config
-2020-06-05 22:51:38,191:  >> # examples= 34323
-2020-06-05 22:51:38,192:  >> batch_size= 1000
-2020-06-05 22:51:38,192:  >> shuffle= False
-2020-06-05 22:51:38,199:  >> BatchSampler; 35 batches
-2020-06-05 22:51:38,199: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:51:38,287: Building train_data from config
-2020-06-05 22:51:43,150:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 22:51:43,150:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 22:51:43,150:  >> stack= False
-2020-06-05 22:51:43,150:  >> seg_durs= (1, None)
-2020-06-05 22:51:43,150:  >> # words= 9971 (# ignored= 0)
-2020-06-05 22:51:43,151:  >> input_feat_dim= 108
-2020-06-05 22:51:43,151:  >> input_num_subwords= 45
-2020-06-05 22:51:43,151: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:51:43,151: Building train_sampler from config
-2020-06-05 22:51:43,151:  >> # examples= 9971
-2020-06-05 22:51:43,151:  >> batch_size= 256
-2020-06-05 22:51:43,151:  >> shuffle= True
-2020-06-05 22:51:43,160:  >> BatchSampler; 39 batches
-2020-06-05 22:51:43,160: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:51:43,160: Building dev_data from config
-2020-06-05 22:51:48,794:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 22:51:48,794:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 22:51:48,794:  >> stack= False
-2020-06-05 22:51:48,794:  >> seg_durs= (1, None)
-2020-06-05 22:51:48,794:  >> # words= 10966 (# ignored= 0)
-2020-06-05 22:51:48,794:  >> input_feat_dim= 108
-2020-06-05 22:51:48,795:  >> input_num_subwords= 45
-2020-06-05 22:51:48,795: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:51:48,795: Building dev_sampler from config
-2020-06-05 22:51:48,795:  >> # examples= 10966
-2020-06-05 22:51:48,795:  >> batch_size= 256
-2020-06-05 22:51:48,795:  >> shuffle= False
-2020-06-05 22:51:48,797:  >> BatchSampler; 43 batches
-2020-06-05 22:51:48,797: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 22:51:48,798: Building test_data from config
-2020-06-05 22:51:53,740:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 22:51:53,740:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 22:51:53,740:  >> stack= False
-2020-06-05 22:51:53,740:  >> seg_durs= (1, None)
-2020-06-05 22:51:53,740:  >> # words= 11024 (# ignored= 0)
-2020-06-05 22:51:53,740:  >> input_feat_dim= 108
-2020-06-05 22:51:53,740:  >> input_num_subwords= 45
-2020-06-05 22:51:53,741: Using module at data.batch_samplers.BatchSampler
-2020-06-05 22:51:53,741: Building test_sampler from config
-2020-06-05 22:51:53,741:  >> # examples= 11024
-2020-06-05 22:51:53,741:  >> batch_size= 256
-2020-06-05 22:51:53,741:  >> shuffle= False
-2020-06-05 22:51:53,743:  >> BatchSampler; 44 batches
-2020-06-05 22:51:53,743: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 22:51:53,754: Building loss from config
-2020-06-05 22:51:53,754:  >> margin= 0.4
-2020-06-05 22:51:53,755:  >> k= 16
-2020-06-05 22:51:53,755:  >> min_k= 8
-2020-06-05 22:51:53,755:  >> extra= 0
-2020-06-05 22:51:53,755:  >> average= False
-2020-06-05 22:51:53,762: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 22:51:53,802: Building eval from config
-2020-06-05 22:51:53,802:  >> acoustic_ap= True
-2020-06-05 22:51:53,802:  >> crossview_ap= True
-2020-06-05 22:51:53,803:  >> full_vocab= False
-2020-06-05 22:51:53,803:  >> metric= crossview_ap
-2020-06-05 22:51:53,803:  >> mode= max
-2020-06-05 22:51:53,803: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 22:51:53,811: Building net from config
-2020-06-05 22:51:53,812: view1:
-2020-06-05 22:51:53,813:  >> cell= GRU
-2020-06-05 22:51:53,813:  >> input_size= 108
-2020-06-05 22:51:53,813:  >> hidden_size= 512
-2020-06-05 22:51:53,813:  >> bidirectional= True
-2020-06-05 22:51:53,813:  >> num_layers= 6
-2020-06-05 22:51:53,814:  >> dropout between layers= 0.4
-2020-06-05 22:51:54,006: view2:
-2020-06-05 22:51:54,006:  >> cell= GRU
-2020-06-05 22:51:54,006:  >> input_size= 64
-2020-06-05 22:51:54,007:  >> hidden_size= 512
-2020-06-05 22:51:54,007:  >> bidirectional= True
-2020-06-05 22:51:54,007:  >> num_layers= 2
-2020-06-05 22:51:54,007:  >> dropout between layers= 0.4
-2020-06-05 22:51:54,007:  >> num input embeddings= 45
-2020-06-05 22:51:54,060: Using module at optim.adam.Adam
-2020-06-05 22:51:54,062: Building optim from config
-2020-06-05 22:51:54,063:  >> lr= 0.001
-2020-06-05 22:51:54,063:  >> betas= (0.9, 0.999)
-2020-06-05 22:51:54,063:  >> eps= 1e-08
-2020-06-05 22:51:54,063:  >> weight_decay= 0
-2020-06-05 22:51:54,063:  >> amsgrad= False
-2020-06-05 22:51:54,063:  >> min_lr= 1e-07
-2020-06-05 22:51:54,064: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 22:51:54,069: Building sched from config
-2020-06-05 22:51:54,070:  >> optim= Adam
-2020-06-05 22:51:54,070:  >> decay lr by 0.1
-2020-06-05 22:51:54,070:  >> eval_fn= MultiViewAP
-2020-06-05 22:51:54,071:  >> patience=4
-2020-06-05 22:51:54,071:  >> revert=True
-2020-06-05 22:51:54,071: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 22:51:54,071: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 22:55:15,997: 0) loss=0.494 grad_norm=51.02 num_segments=256 num_words=204
-2020-06-05 22:59:14,967: 1) loss=0.494 grad_norm=43.73 num_segments=256 num_words=211
-2020-06-05 23:09:44,965: 
-
-Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-05 23:09:44,966: Using 1 GPU(s)
-2020-06-05 23:09:44,966: Machine: 0 / 1
-2020-06-05 23:09:44,967: Hyperparam tuning-------------------
-2020-06-05 23:09:44,967: optim_lr: 0.001
-2020-06-05 23:09:44,967: dropout (for both): 0.4
-2020-06-05 23:09:44,967: margin: 0.4
-2020-06-05 23:09:44,967: ------------------------------------
-2020-06-05 23:09:44,970: Calling main function: multiview_trainer.train
-2020-06-05 23:09:44,970: Using config file: train_config.json
-2020-06-05 23:09:44,971: Using module at multiview_trainer.train
-2020-06-05 23:09:45,292: Using module at multiview_vocab.MultiViewVocab
-2020-06-05 23:09:45,300: Building vocab_data from config
-2020-06-05 23:09:45,546:  >> min_count= 0
-2020-06-05 23:09:45,546:  >> # words= 34323 (# removed= 0)
-2020-06-05 23:09:45,546:  >> # subwords= 45
-2020-06-05 23:09:45,546:     [laughter]= 1
-2020-06-05 23:09:45,547:     [noise]= 2
-2020-06-05 23:09:45,547:     [vocalized-noise]= 3
-2020-06-05 23:09:45,547:     aa= 4
-2020-06-05 23:09:45,547:     ae= 5
-2020-06-05 23:09:45,547:     ah= 6
-2020-06-05 23:09:45,547:     ao= 7
-2020-06-05 23:09:45,547:     aw= 8
-2020-06-05 23:09:45,547:     ax= 9
-2020-06-05 23:09:45,547:     ay= 10
-2020-06-05 23:09:45,547:     b= 11
-2020-06-05 23:09:45,547:     ch= 12
-2020-06-05 23:09:45,547:     d= 13
-2020-06-05 23:09:45,547:     dh= 14
-2020-06-05 23:09:45,547:     eh= 15
-2020-06-05 23:09:45,547:     el= 16
-2020-06-05 23:09:45,547:     en= 17
-2020-06-05 23:09:45,547:     er= 18
-2020-06-05 23:09:45,547:     ey= 19
-2020-06-05 23:09:45,547:     f= 20
-2020-06-05 23:09:45,547:     g= 21
-2020-06-05 23:09:45,547:     hh= 22
-2020-06-05 23:09:45,547:     ih= 23
-2020-06-05 23:09:45,547:     iy= 24
-2020-06-05 23:09:45,547:     jh= 25
-2020-06-05 23:09:45,547:     k= 26
-2020-06-05 23:09:45,548:     l= 27
-2020-06-05 23:09:45,548:     m= 28
-2020-06-05 23:09:45,548:     n= 29
-2020-06-05 23:09:45,548:     ng= 30
-2020-06-05 23:09:45,548:     ow= 31
-2020-06-05 23:09:45,548:     oy= 32
-2020-06-05 23:09:45,548:     p= 33
-2020-06-05 23:09:45,548:     r= 34
-2020-06-05 23:09:45,548:     s= 35
-2020-06-05 23:09:45,548:     sh= 36
-2020-06-05 23:09:45,548:     t= 37
-2020-06-05 23:09:45,548:     th= 38
-2020-06-05 23:09:45,548:     uh= 39
-2020-06-05 23:09:45,548:     uw= 40
-2020-06-05 23:09:45,548:     v= 41
-2020-06-05 23:09:45,548:     w= 42
-2020-06-05 23:09:45,548:     y= 43
-2020-06-05 23:09:45,548:     z= 44
-2020-06-05 23:09:45,548:     zh= 45
-2020-06-05 23:09:45,557: Using module at data.batch_samplers.BatchSampler
-2020-06-05 23:09:45,559: Building vocab_sampler from config
-2020-06-05 23:09:45,559:  >> # examples= 34323
-2020-06-05 23:09:45,560:  >> batch_size= 1000
-2020-06-05 23:09:45,560:  >> shuffle= False
-2020-06-05 23:09:45,565:  >> BatchSampler; 35 batches
-2020-06-05 23:09:45,565: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 23:09:45,746: Building train_data from config
-2020-06-05 23:09:50,246:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-05 23:09:50,246:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-05 23:09:50,246:  >> stack= False
-2020-06-05 23:09:50,246:  >> seg_durs= (1, None)
-2020-06-05 23:09:50,246:  >> # words= 9971 (# ignored= 0)
-2020-06-05 23:09:50,246:  >> input_feat_dim= 108
-2020-06-05 23:09:50,246:  >> input_num_subwords= 45
-2020-06-05 23:09:50,246: Using module at data.batch_samplers.BatchSampler
-2020-06-05 23:09:50,247: Building train_sampler from config
-2020-06-05 23:09:50,247:  >> # examples= 9971
-2020-06-05 23:09:50,247:  >> batch_size= 256
-2020-06-05 23:09:50,247:  >> shuffle= True
-2020-06-05 23:09:50,256:  >> BatchSampler; 39 batches
-2020-06-05 23:09:50,256: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 23:09:50,256: Building dev_data from config
-2020-06-05 23:09:55,566:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-05 23:09:55,566:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-05 23:09:55,566:  >> stack= False
-2020-06-05 23:09:55,567:  >> seg_durs= (1, None)
-2020-06-05 23:09:55,567:  >> # words= 10966 (# ignored= 0)
-2020-06-05 23:09:55,567:  >> input_feat_dim= 108
-2020-06-05 23:09:55,567:  >> input_num_subwords= 45
-2020-06-05 23:09:55,567: Using module at data.batch_samplers.BatchSampler
-2020-06-05 23:09:55,567: Building dev_sampler from config
-2020-06-05 23:09:55,567:  >> # examples= 10966
-2020-06-05 23:09:55,567:  >> batch_size= 256
-2020-06-05 23:09:55,567:  >> shuffle= False
-2020-06-05 23:09:55,570:  >> BatchSampler; 43 batches
-2020-06-05 23:09:55,570: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-05 23:09:55,570: Building test_data from config
-2020-06-05 23:10:00,200:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-05 23:10:00,200:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-05 23:10:00,200:  >> stack= False
-2020-06-05 23:10:00,200:  >> seg_durs= (1, None)
-2020-06-05 23:10:00,200:  >> # words= 11024 (# ignored= 0)
-2020-06-05 23:10:00,200:  >> input_feat_dim= 108
-2020-06-05 23:10:00,200:  >> input_num_subwords= 45
-2020-06-05 23:10:00,200: Using module at data.batch_samplers.BatchSampler
-2020-06-05 23:10:00,200: Building test_sampler from config
-2020-06-05 23:10:00,200:  >> # examples= 11024
-2020-06-05 23:10:00,200:  >> batch_size= 256
-2020-06-05 23:10:00,201:  >> shuffle= False
-2020-06-05 23:10:00,202:  >> BatchSampler; 44 batches
-2020-06-05 23:10:00,202: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-05 23:10:00,216: Building loss from config
-2020-06-05 23:10:00,216:  >> margin= 0.4
-2020-06-05 23:10:00,216:  >> k= 16
-2020-06-05 23:10:00,216:  >> min_k= 8
-2020-06-05 23:10:00,216:  >> extra= 0
-2020-06-05 23:10:00,216:  >> average= False
-2020-06-05 23:10:00,234: Using module at metric.multiview_ap.MultiViewAP
-2020-06-05 23:10:00,320: Building eval from config
-2020-06-05 23:10:00,320:  >> acoustic_ap= True
-2020-06-05 23:10:00,320:  >> crossview_ap= True
-2020-06-05 23:10:00,320:  >> full_vocab= False
-2020-06-05 23:10:00,320:  >> metric= crossview_ap
-2020-06-05 23:10:00,320:  >> mode= max
-2020-06-05 23:10:00,320: Using module at multiview_rnn.MultiViewRNN
-2020-06-05 23:10:00,337: Building net from config
-2020-06-05 23:10:00,338: view1:
-2020-06-05 23:10:00,339:  >> cell= GRU
-2020-06-05 23:10:00,339:  >> input_size= 108
-2020-06-05 23:10:00,339:  >> hidden_size= 512
-2020-06-05 23:10:00,339:  >> bidirectional= True
-2020-06-05 23:10:00,340:  >> num_layers= 6
-2020-06-05 23:10:00,340:  >> dropout between layers= 0.4
-2020-06-05 23:10:00,518: view2:
-2020-06-05 23:10:00,518:  >> cell= GRU
-2020-06-05 23:10:00,518:  >> input_size= 64
-2020-06-05 23:10:00,518:  >> hidden_size= 512
-2020-06-05 23:10:00,518:  >> bidirectional= True
-2020-06-05 23:10:00,519:  >> num_layers= 2
-2020-06-05 23:10:00,519:  >> dropout between layers= 0.4
-2020-06-05 23:10:00,519:  >> num input embeddings= 45
-2020-06-05 23:10:00,599: Using module at optim.adam.Adam
-2020-06-05 23:10:00,604: Building optim from config
-2020-06-05 23:10:00,604:  >> lr= 0.001
-2020-06-05 23:10:00,604:  >> betas= (0.9, 0.999)
-2020-06-05 23:10:00,605:  >> eps= 1e-08
-2020-06-05 23:10:00,605:  >> weight_decay= 0
-2020-06-05 23:10:00,605:  >> amsgrad= False
-2020-06-05 23:10:00,605:  >> min_lr= 1e-07
-2020-06-05 23:10:00,606: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-05 23:10:00,615: Building sched from config
-2020-06-05 23:10:00,615:  >> optim= Adam
-2020-06-05 23:10:00,615:  >> decay lr by 0.1
-2020-06-05 23:10:00,615:  >> eval_fn= MultiViewAP
-2020-06-05 23:10:00,616:  >> patience=4
-2020-06-05 23:10:00,616:  >> revert=True
-2020-06-05 23:10:00,616: epoch=0.00 global_step=0 lr=0.001 start_iter=0
-2020-06-05 23:10:00,616: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 23:11:17,904: 0) loss=0.494 grad_norm=51.02 num_segments=256 num_words=204
-2020-06-05 23:12:42,947: 1) loss=0.494 grad_norm=43.73 num_segments=256 num_words=211
-2020-06-05 23:13:42,075: 2) loss=0.497 grad_norm=64.81 num_segments=256 num_words=202
-2020-06-05 23:14:38,711: 3) loss=0.475 grad_norm=52.18 num_segments=256 num_words=218
-2020-06-05 23:15:37,720: 4) loss=0.479 grad_norm=53.75 num_segments=256 num_words=204
-2020-06-05 23:16:36,415: 5) loss=0.473 grad_norm=83.37 num_segments=256 num_words=194
-2020-06-05 23:17:27,930: 6) loss=0.499 grad_norm=66.64 num_segments=256 num_words=218
-2020-06-05 23:18:23,101: 7) loss=0.467 grad_norm=53.79 num_segments=256 num_words=207
-2020-06-05 23:19:21,064: 8) loss=0.503 grad_norm=50.37 num_segments=256 num_words=207
-2020-06-05 23:20:25,460: 9) loss=0.500 grad_norm=41.35 num_segments=256 num_words=217
-2020-06-05 23:21:22,333: 10) loss=0.469 grad_norm=53.63 num_segments=256 num_words=218
-2020-06-05 23:22:22,393: 11) loss=0.461 grad_norm=49.82 num_segments=256 num_words=208
-2020-06-05 23:23:27,898: 12) loss=0.464 grad_norm=46.38 num_segments=256 num_words=223
-2020-06-05 23:24:26,917: 13) loss=0.462 grad_norm=44.55 num_segments=256 num_words=211
-2020-06-05 23:25:23,801: 14) loss=0.459 grad_norm=38.74 num_segments=256 num_words=216
-2020-06-05 23:26:18,289: 15) loss=0.445 grad_norm=47.36 num_segments=256 num_words=198
-2020-06-05 23:27:34,886: 16) loss=0.449 grad_norm=49.41 num_segments=256 num_words=209
-2020-06-05 23:28:35,222: 17) loss=0.477 grad_norm=39.42 num_segments=256 num_words=210
-2020-06-05 23:29:32,037: 18) loss=0.446 grad_norm=40.80 num_segments=256 num_words=209
-2020-06-05 23:30:27,288: 19) loss=0.437 grad_norm=51.28 num_segments=256 num_words=210
-2020-06-05 23:31:22,797: 20) loss=0.457 grad_norm=35.20 num_segments=256 num_words=212
-2020-06-05 23:32:35,573: 21) loss=0.439 grad_norm=36.66 num_segments=256 num_words=216
-2020-06-05 23:33:27,680: 22) loss=0.431 grad_norm=40.08 num_segments=256 num_words=209
-2020-06-05 23:34:44,067: 23) loss=0.432 grad_norm=32.01 num_segments=256 num_words=220
-2020-06-05 23:35:44,184: 24) loss=0.427 grad_norm=44.31 num_segments=256 num_words=202
-2020-06-05 23:36:43,700: 25) loss=0.436 grad_norm=38.58 num_segments=256 num_words=207
-2020-06-05 23:37:37,940: 26) loss=0.427 grad_norm=38.24 num_segments=256 num_words=209
-2020-06-05 23:38:32,488: 27) loss=0.411 grad_norm=37.47 num_segments=256 num_words=204
-2020-06-05 23:39:32,919: 28) loss=0.421 grad_norm=47.51 num_segments=256 num_words=216
-2020-06-05 23:40:30,711: 29) loss=0.444 grad_norm=43.23 num_segments=256 num_words=207
-2020-06-05 23:41:30,996: 30) loss=0.450 grad_norm=38.84 num_segments=256 num_words=220
-2020-06-05 23:42:29,356: 31) loss=0.431 grad_norm=41.96 num_segments=256 num_words=212
-2020-06-05 23:43:21,292: 32) loss=0.415 grad_norm=41.22 num_segments=256 num_words=210
-2020-06-05 23:44:16,360: 33) loss=0.415 grad_norm=43.61 num_segments=256 num_words=202
-2020-06-05 23:45:20,924: 34) loss=0.399 grad_norm=58.63 num_segments=256 num_words=213
-2020-06-05 23:46:19,148: 35) loss=0.396 grad_norm=38.30 num_segments=256 num_words=205
-2020-06-05 23:47:16,863: 36) loss=0.412 grad_norm=52.64 num_segments=256 num_words=208
-2020-06-05 23:48:17,064: 37) loss=0.399 grad_norm=57.89 num_segments=256 num_words=209
-2020-06-05 23:49:13,144: 38) loss=0.403 grad_norm=42.02 num_segments=243 num_words=211
-2020-06-05 23:49:13,246: epoch= 1.00
-2020-06-05 23:49:13,247:  >> time to evaluate and save:
-2020-06-05 23:49:13,272: saved save/MultiViewDataset_IndividualWords.39.pth
-2020-06-05 23:49:13,273: most_recent linked save/MultiViewDataset_IndividualWords.most_recent.pth
-2020-06-05 23:49:13,274: saved MultiViewDataset_IndividualWords successfully
-2020-06-05 23:49:14,474: saved save/MultiViewRNN.39.pth
-2020-06-05 23:49:14,475: most_recent linked save/MultiViewRNN.most_recent.pth
-2020-06-05 23:49:14,477: saved MultiViewRNN successfully
-2020-06-05 23:49:16,829: saved save/Adam.39.pth
-2020-06-05 23:49:16,830: most_recent linked save/Adam.most_recent.pth
-2020-06-05 23:49:16,831: saved Adam successfully
-2020-06-05 23:49:16,833: saved save/ReduceLROnPlateau.39.pth
-2020-06-05 23:49:16,834: most_recent linked save/ReduceLROnPlateau.most_recent.pth
-2020-06-05 23:49:16,835: saved ReduceLROnPlateau successfully
-2020-06-05 23:49:16,837: saved config successfully
-2020-06-05 23:52:17,161:   >> crossview_ap=0.043 (10966 x 3921 pairs)
-2020-06-05 23:53:06,864:   >> acoustic_ap=0.079 (10966 choose 2 pairs)
-2020-06-05 23:53:06,866: best_so_far= 0.043 at 39
-2020-06-05 23:53:06,868: best linked save/MultiViewDataset_IndividualWords.best.pth
-2020-06-05 23:53:06,870: saved MultiViewDataset_IndividualWords successfully
-2020-06-05 23:53:06,870: best linked save/MultiViewRNN.best.pth
-2020-06-05 23:53:06,871: saved MultiViewRNN successfully
-2020-06-05 23:53:06,872: best linked save/Adam.best.pth
-2020-06-05 23:53:06,873: saved Adam successfully
-2020-06-05 23:53:06,873: best linked save/ReduceLROnPlateau.best.pth
-2020-06-05 23:53:06,874: saved ReduceLROnPlateau successfully
-2020-06-05 23:53:06,893: epoch=1.00 global_step=39 lr=0.001 start_iter=0
-2020-06-05 23:53:06,893: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
-2020-06-05 23:54:16,995: 0) loss=0.408 grad_norm=66.96 num_segments=256 num_words=218
-2020-06-05 23:55:20,088: 1) loss=0.384 grad_norm=42.36 num_segments=256 num_words=212
-2020-06-05 23:56:21,505: 2) loss=0.397 grad_norm=41.52 num_segments=256 num_words=209
-2020-06-05 23:57:18,061: 3) loss=0.381 grad_norm=64.04 num_segments=256 num_words=211
-2020-06-05 23:58:22,569: 4) loss=0.424 grad_norm=55.70 num_segments=256 num_words=215
-2020-06-05 23:59:21,445: 5) loss=0.396 grad_norm=35.64 num_segments=256 num_words=213
-2020-06-06 00:00:53,159: 6) loss=0.382 grad_norm=49.26 num_segments=256 num_words=216
-2020-06-06 00:02:16,636: 7) loss=0.390 grad_norm=35.46 num_segments=256 num_words=203
-2020-06-06 00:03:20,016: 8) loss=0.385 grad_norm=59.83 num_segments=256 num_words=218
-2020-06-06 00:04:20,627: 9) loss=0.389 grad_norm=41.75 num_segments=256 num_words=212
-2020-06-06 09:18:01,871: 
-
-Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-06 09:18:01,871: Using 1 GPU(s)
-2020-06-06 09:18:01,872: Machine: 0 / 1
-2020-06-06 09:18:01,882: Hyperparam tuning-------------------
-2020-06-06 09:18:01,882: optim_lr: 0.001
-2020-06-06 09:18:01,882: dropout (for both): 0.4
-2020-06-06 09:18:01,882: margin: 0.4
-2020-06-06 09:18:01,883: ------------------------------------
-2020-06-06 09:18:01,903: Calling main function: multiview_trainer.train
-2020-06-06 09:18:01,903: Using config file: train_config.json
-2020-06-06 09:18:01,903: Using module at multiview_trainer.train
-2020-06-06 09:18:03,556: Using module at multiview_vocab.MultiViewVocab
-2020-06-06 09:18:03,573: Building vocab_data from config
-2020-06-06 09:18:54,621: 
-
-Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-2020-06-06 09:18:54,621: Using 1 GPU(s)
-2020-06-06 09:18:54,622: Machine: 0 / 1
-2020-06-06 09:18:54,623: Hyperparam tuning-------------------
-2020-06-06 09:18:54,624: optim_lr: 0.001
-2020-06-06 09:18:54,624: dropout (for both): 0.4
-2020-06-06 09:18:54,624: margin: 0.4
-2020-06-06 09:18:54,624: ------------------------------------
-2020-06-06 09:18:54,628: Calling main function: multiview_trainer.train
-2020-06-06 09:18:54,629: Using config file: train_config.json
-2020-06-06 09:18:54,629: Using module at multiview_trainer.train
-2020-06-06 09:18:55,830: Using module at multiview_vocab.MultiViewVocab
-2020-06-06 09:18:55,838: Building vocab_data from config
-2020-06-06 09:18:56,842:  >> min_count= 0
-2020-06-06 09:18:56,842:  >> # words= 34323 (# removed= 0)
-2020-06-06 09:18:56,842:  >> # subwords= 45
-2020-06-06 09:18:56,842:     [laughter]= 1
-2020-06-06 09:18:56,842:     [noise]= 2
-2020-06-06 09:18:56,876:     [vocalized-noise]= 3
-2020-06-06 09:18:56,926:     aa= 4
-2020-06-06 09:18:56,926:     ae= 5
-2020-06-06 09:18:56,972:     ah= 6
-2020-06-06 09:18:57,051:     ao= 7
-2020-06-06 09:18:57,114:     aw= 8
-2020-06-06 09:18:57,118:     ax= 9
-2020-06-06 09:18:57,118:     ay= 10
-2020-06-06 09:18:57,118:     b= 11
-2020-06-06 09:18:57,124:     ch= 12
-2020-06-06 09:18:57,141:     d= 13
-2020-06-06 09:18:57,151:     dh= 14
-2020-06-06 09:18:57,161:     eh= 15
-2020-06-06 09:18:57,171:     el= 16
-2020-06-06 09:18:57,184:     en= 17
-2020-06-06 09:18:57,205:     er= 18
-2020-06-06 09:18:57,205:     ey= 19
-2020-06-06 09:18:57,205:     f= 20
-2020-06-06 09:18:57,205:     g= 21
-2020-06-06 09:18:57,205:     hh= 22
-2020-06-06 09:18:57,206:     ih= 23
-2020-06-06 09:18:57,206:     iy= 24
-2020-06-06 09:18:57,217:     jh= 25
-2020-06-06 09:18:57,241:     k= 26
-2020-06-06 09:18:57,265:     l= 27
-2020-06-06 09:18:57,281:     m= 28
-2020-06-06 09:18:57,300:     n= 29
-2020-06-06 09:18:57,305:     ng= 30
-2020-06-06 09:18:57,324:     ow= 31
-2020-06-06 09:18:57,345:     oy= 32
-2020-06-06 09:18:57,352:     p= 33
-2020-06-06 09:18:57,367:     r= 34
-2020-06-06 09:18:57,376:     s= 35
-2020-06-06 09:18:57,376:     sh= 36
-2020-06-06 09:18:57,376:     t= 37
-2020-06-06 09:18:57,376:     th= 38
-2020-06-06 09:18:57,376:     uh= 39
-2020-06-06 09:18:57,376:     uw= 40
-2020-06-06 09:18:57,395:     v= 41
-2020-06-06 09:18:57,396:     w= 42
-2020-06-06 09:18:57,415:     y= 43
-2020-06-06 09:18:57,423:     z= 44
-2020-06-06 09:18:57,439:     zh= 45
-2020-06-06 09:18:57,456: Using module at data.batch_samplers.BatchSampler
-2020-06-06 09:18:57,458: Building vocab_sampler from config
-2020-06-06 09:18:57,458:  >> # examples= 34323
-2020-06-06 09:18:57,459:  >> batch_size= 1000
-2020-06-06 09:18:57,459:  >> shuffle= False
-2020-06-06 09:18:57,469:  >> BatchSampler; 35 batches
-2020-06-06 09:18:57,469: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-06 09:19:00,348: Building train_data from config
-2020-06-06 09:19:10,596:  >> feats: loading /scratch/ruolinzheng/data/fbank.train.hdf5
-2020-06-06 09:19:10,598:  >> align: loading /scratch/ruolinzheng/data/align-small.train.hdf5
-2020-06-06 09:19:10,603:  >> stack= False
-2020-06-06 09:19:10,608:  >> seg_durs= (1, None)
-2020-06-06 09:19:10,609:  >> # words= 9971 (# ignored= 0)
-2020-06-06 09:19:10,614:  >> input_feat_dim= 108
-2020-06-06 09:19:10,619:  >> input_num_subwords= 45
-2020-06-06 09:19:10,620: Using module at data.batch_samplers.BatchSampler
-2020-06-06 09:19:10,623: Building train_sampler from config
-2020-06-06 09:19:10,625:  >> # examples= 9971
-2020-06-06 09:19:10,625:  >> batch_size= 256
-2020-06-06 09:19:10,626:  >> shuffle= True
-2020-06-06 09:19:10,642:  >> BatchSampler; 39 batches
-2020-06-06 09:19:10,642: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-06 09:19:10,643: Building dev_data from config
-2020-06-06 09:19:21,972:  >> feats: loading /scratch/ruolinzheng/data/fbank.dev.hdf5
-2020-06-06 09:19:21,973:  >> align: loading /scratch/ruolinzheng/data/align-small.dev.hdf5
-2020-06-06 09:19:21,973:  >> stack= False
-2020-06-06 09:19:21,974:  >> seg_durs= (1, None)
-2020-06-06 09:19:21,974:  >> # words= 10966 (# ignored= 0)
-2020-06-06 09:19:21,975:  >> input_feat_dim= 108
-2020-06-06 09:19:21,975:  >> input_num_subwords= 45
-2020-06-06 09:19:21,975: Using module at data.batch_samplers.BatchSampler
-2020-06-06 09:19:21,975: Building dev_sampler from config
-2020-06-06 09:19:21,977:  >> # examples= 10966
-2020-06-06 09:19:21,977:  >> batch_size= 256
-2020-06-06 09:19:21,977:  >> shuffle= False
-2020-06-06 09:19:21,983:  >> BatchSampler; 43 batches
-2020-06-06 09:19:21,983: Using module at multiview_dataset.MultiViewDataset_IndividualWords
-2020-06-06 09:19:21,983: Building test_data from config
-2020-06-06 09:19:32,096:  >> feats: loading /scratch/ruolinzheng/data/fbank.test.hdf5
-2020-06-06 09:19:32,097:  >> align: loading /scratch/ruolinzheng/data/align-small.test.hdf5
-2020-06-06 09:19:32,097:  >> stack= False
-2020-06-06 09:19:32,099:  >> seg_durs= (1, None)
-2020-06-06 09:19:32,099:  >> # words= 11024 (# ignored= 0)
-2020-06-06 09:19:32,100:  >> input_feat_dim= 108
-2020-06-06 09:19:32,100:  >> input_num_subwords= 45
-2020-06-06 09:19:32,100: Using module at data.batch_samplers.BatchSampler
-2020-06-06 09:19:32,101: Building test_sampler from config
-2020-06-06 09:19:32,102:  >> # examples= 11024
-2020-06-06 09:19:32,102:  >> batch_size= 256
-2020-06-06 09:19:32,102:  >> shuffle= False
-2020-06-06 09:19:32,107:  >> BatchSampler; 44 batches
-2020-06-06 09:19:32,107: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
-2020-06-06 09:19:32,622: Building loss from config
-2020-06-06 09:19:32,623:  >> margin= 0.4
-2020-06-06 09:19:32,643:  >> k= 16
-2020-06-06 09:19:32,644:  >> min_k= 8
-2020-06-06 09:19:32,644:  >> extra= 0
-2020-06-06 09:19:32,645:  >> average= False
-2020-06-06 09:19:32,647: Using module at metric.multiview_ap.MultiViewAP
-2020-06-06 09:19:34,397: Building eval from config
-2020-06-06 09:19:34,398:  >> acoustic_ap= True
-2020-06-06 09:19:34,399:  >> crossview_ap= True
-2020-06-06 09:19:34,399:  >> full_vocab= False
-2020-06-06 09:19:34,400:  >> metric= crossview_ap
-2020-06-06 09:19:34,400:  >> mode= max
-2020-06-06 09:19:34,400: Using module at multiview_rnn.MultiViewRNN
-2020-06-06 09:19:34,415: Building net from config
-2020-06-06 09:19:34,418: view1:
-2020-06-06 09:19:34,419:  >> cell= GRU
-2020-06-06 09:19:34,420:  >> input_size= 108
-2020-06-06 09:19:34,420:  >> hidden_size= 512
-2020-06-06 09:19:34,420:  >> bidirectional= True
-2020-06-06 09:19:34,420:  >> num_layers= 6
-2020-06-06 09:19:34,420:  >> dropout between layers= 0.4
-2020-06-06 09:19:34,791: view2:
-2020-06-06 09:19:34,792:  >> cell= GRU
-2020-06-06 09:19:34,793:  >> input_size= 64
-2020-06-06 09:19:34,793:  >> hidden_size= 512
-2020-06-06 09:19:34,793:  >> bidirectional= True
-2020-06-06 09:19:34,794:  >> num_layers= 2
-2020-06-06 09:19:34,794:  >> dropout between layers= 0.4
-2020-06-06 09:19:34,794:  >> num input embeddings= 45
-2020-06-06 09:19:35,160: Using module at optim.adam.Adam
-2020-06-06 09:19:35,167: Building optim from config
-2020-06-06 09:19:35,168:  >> lr= 0.001
-2020-06-06 09:19:35,168:  >> betas= (0.9, 0.999)
-2020-06-06 09:19:35,169:  >> eps= 1e-08
-2020-06-06 09:19:35,169:  >> weight_decay= 0
-2020-06-06 09:19:35,169:  >> amsgrad= False
-2020-06-06 09:19:35,169:  >> min_lr= 1e-07
-2020-06-06 09:19:35,171: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
-2020-06-06 09:19:35,177: Building sched from config
-2020-06-06 09:19:35,178:  >> optim= Adam
-2020-06-06 09:19:35,179:  >> decay lr by 0.1
-2020-06-06 09:19:35,179:  >> eval_fn= MultiViewAP
-2020-06-06 09:19:35,180:  >> patience=4
-2020-06-06 09:19:35,181:  >> revert=True
-2020-06-06 09:19:35,225: loaded save/MultiViewDataset_IndividualWords.39.pth
-2020-06-06 09:19:35,225: note: relative to /home/ruolinzheng/ttic31110-agwe
-2020-06-06 09:19:46,244: loaded save/MultiViewRNN.39.pth
-2020-06-06 09:19:46,245: note: relative to /home/ruolinzheng/ttic31110-agwe
-2020-06-06 09:20:08,261: loaded save/Adam.39.pth
-2020-06-06 09:20:08,262: note: relative to /home/ruolinzheng/ttic31110-agwe
-2020-06-06 09:20:08,290: loaded save/ReduceLROnPlateau.39.pth
-2020-06-06 09:20:08,290: note: relative to /home/ruolinzheng/ttic31110-agwe
-2020-06-06 09:20:08,290: epoch=1.00 global_step=39 lr=0.001 start_iter=0
-2020-06-06 09:20:08,291: Iterating MultiViewDataset_IndividualWords (start_iter= 0)
+2020-06-07 10:21:05,930: Using CPU
+2020-06-07 10:21:05,930: Machine: 0 / 1
+2020-06-07 10:21:05,931: Hyperparam tuning-------------------
+2020-06-07 10:21:05,931: optim_lr: 0.001
+2020-06-07 10:21:05,931: dropout (for both): 0.4
+2020-06-07 10:21:05,931: margin: 0.4
+2020-06-07 10:21:05,931: ------------------------------------
+2020-06-07 10:21:05,935: Calling main function: multiview_trainer.train
+2020-06-07 10:21:05,935: Using config file: train_config.json
+2020-06-07 10:21:05,935: Using module at multiview_trainer.train
+2020-06-07 10:21:06,200: Using module at multiview_vocab.MultiViewVocab
+2020-06-07 10:21:06,202: Building vocab_data from config
+2020-06-07 10:21:06,563:  >> min_count= 0
+2020-06-07 10:21:06,563:  >> # words= 34323 (# removed= 0)
+2020-06-07 10:21:06,563:  >> # subwords= 45
+2020-06-07 10:21:06,563:     [laughter]= 1
+2020-06-07 10:21:06,563:     [noise]= 2
+2020-06-07 10:21:06,563:     [vocalized-noise]= 3
+2020-06-07 10:21:06,564:     aa= 4
+2020-06-07 10:21:06,564:     ae= 5
+2020-06-07 10:21:06,564:     ah= 6
+2020-06-07 10:21:06,564:     ao= 7
+2020-06-07 10:21:06,564:     aw= 8
+2020-06-07 10:21:06,564:     ax= 9
+2020-06-07 10:21:06,564:     ay= 10
+2020-06-07 10:21:06,564:     b= 11
+2020-06-07 10:21:06,564:     ch= 12
+2020-06-07 10:21:06,565:     d= 13
+2020-06-07 10:21:06,565:     dh= 14
+2020-06-07 10:21:06,565:     eh= 15
+2020-06-07 10:21:06,565:     el= 16
+2020-06-07 10:21:06,565:     en= 17
+2020-06-07 10:21:06,565:     er= 18
+2020-06-07 10:21:06,565:     ey= 19
+2020-06-07 10:21:06,565:     f= 20
+2020-06-07 10:21:06,565:     g= 21
+2020-06-07 10:21:06,565:     hh= 22
+2020-06-07 10:21:06,566:     ih= 23
+2020-06-07 10:21:06,566:     iy= 24
+2020-06-07 10:21:06,566:     jh= 25
+2020-06-07 10:21:06,566:     k= 26
+2020-06-07 10:21:06,566:     l= 27
+2020-06-07 10:21:06,566:     m= 28
+2020-06-07 10:21:06,566:     n= 29
+2020-06-07 10:21:06,566:     ng= 30
+2020-06-07 10:21:06,566:     ow= 31
+2020-06-07 10:21:06,566:     oy= 32
+2020-06-07 10:21:06,566:     p= 33
+2020-06-07 10:21:06,567:     r= 34
+2020-06-07 10:21:06,567:     s= 35
+2020-06-07 10:21:06,567:     sh= 36
+2020-06-07 10:21:06,567:     t= 37
+2020-06-07 10:21:06,567:     th= 38
+2020-06-07 10:21:06,567:     uh= 39
+2020-06-07 10:21:06,567:     uw= 40
+2020-06-07 10:21:06,567:     v= 41
+2020-06-07 10:21:06,567:     w= 42
+2020-06-07 10:21:06,567:     y= 43
+2020-06-07 10:21:06,567:     z= 44
+2020-06-07 10:21:06,568:     zh= 45
+2020-06-07 10:21:06,584: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:21:06,585: Building vocab_sampler from config
+2020-06-07 10:21:06,585:  >> # examples= 34323
+2020-06-07 10:21:06,585:  >> batch_size= 1000
+2020-06-07 10:21:06,585:  >> shuffle= False
+2020-06-07 10:21:06,594:  >> BatchSampler; 35 batches
+2020-06-07 10:21:06,594: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:21:06,696: Building train_data from config
+2020-06-07 10:21:16,462:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.train.hdf5
+2020-06-07 10:21:16,463:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.train.hdf5
+2020-06-07 10:21:16,463:  >> stack= False
+2020-06-07 10:21:16,463:  >> seg_durs= (1, None)
+2020-06-07 10:21:16,463:  >> # words= 9971 (# ignored= 0)
+2020-06-07 10:21:16,463:  >> input_feat_dim= 108
+2020-06-07 10:21:16,464:  >> input_num_subwords= 45
+2020-06-07 10:21:16,464: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:21:16,465: Building train_sampler from config
+2020-06-07 10:21:16,465:  >> # examples= 9971
+2020-06-07 10:21:16,465:  >> batch_size= 256
+2020-06-07 10:21:16,466:  >> shuffle= True
+2020-06-07 10:21:16,478:  >> BatchSampler; 39 batches
+2020-06-07 10:21:16,479: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:21:16,479: Building dev_data from config
+2020-06-07 10:21:27,873:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.dev.hdf5
+2020-06-07 10:21:27,874:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.dev.hdf5
+2020-06-07 10:21:27,874:  >> stack= False
+2020-06-07 10:21:27,874:  >> seg_durs= (1, None)
+2020-06-07 10:21:27,874:  >> # words= 10966 (# ignored= 0)
+2020-06-07 10:21:27,874:  >> input_feat_dim= 108
+2020-06-07 10:21:27,874:  >> input_num_subwords= 45
+2020-06-07 10:21:27,875: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:21:27,876: Building dev_sampler from config
+2020-06-07 10:21:27,876:  >> # examples= 10966
+2020-06-07 10:21:27,876:  >> batch_size= 256
+2020-06-07 10:21:27,876:  >> shuffle= False
+2020-06-07 10:21:27,881:  >> BatchSampler; 43 batches
+2020-06-07 10:21:27,881: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-07 10:21:27,881: Building test_data from config
+2020-06-07 10:21:37,742:  >> feats: loading /share/data/speech/spsettle/Data/swb300/wdp/fbank.test.hdf5
+2020-06-07 10:21:37,742:  >> align: loading /share/data/speech/spsettle/Data/swb300/wdp/align-small.test.hdf5
+2020-06-07 10:21:37,743:  >> stack= False
+2020-06-07 10:21:37,743:  >> seg_durs= (1, None)
+2020-06-07 10:21:37,743:  >> # words= 11024 (# ignored= 0)
+2020-06-07 10:21:37,743:  >> input_feat_dim= 108
+2020-06-07 10:21:37,743:  >> input_num_subwords= 45
+2020-06-07 10:21:37,743: Using module at data.batch_samplers.BatchSampler
+2020-06-07 10:21:37,743: Building test_sampler from config
+2020-06-07 10:21:37,744:  >> # examples= 11024
+2020-06-07 10:21:37,744:  >> batch_size= 256
+2020-06-07 10:21:37,744:  >> shuffle= False
+2020-06-07 10:21:37,747:  >> BatchSampler; 44 batches
+2020-06-07 10:21:37,747: Using module at loss.multiview_triplet_loss.MultiViewTripletLoss
+2020-06-07 10:21:37,777: Building loss from config
+2020-06-07 10:21:37,777:  >> margin= 0.4
+2020-06-07 10:21:37,778:  >> k= 16
+2020-06-07 10:21:37,778:  >> min_k= 8
+2020-06-07 10:21:37,778:  >> extra= 0
+2020-06-07 10:21:37,778:  >> average= False
+2020-06-07 10:21:37,778: Using module at metric.multiview_ap.MultiViewAP
+2020-06-07 10:21:37,833: Building eval from config
+2020-06-07 10:21:37,834:  >> acoustic_ap= True
+2020-06-07 10:21:37,834:  >> crossview_ap= True
+2020-06-07 10:21:37,834:  >> full_vocab= False
+2020-06-07 10:21:37,835:  >> metric= crossview_ap
+2020-06-07 10:21:37,835:  >> mode= max
+2020-06-07 10:21:37,835: Using module at multiview_rnn.MultiViewRNN
+2020-06-07 10:21:37,837: Building net from config
+2020-06-07 10:21:37,839: view1:
+2020-06-07 10:21:37,840:  >> cell= GRU
+2020-06-07 10:21:37,840:  >> input_size= 108
+2020-06-07 10:21:37,840:  >> hidden_size= 512
+2020-06-07 10:21:37,840:  >> bidirectional= True
+2020-06-07 10:21:37,840:  >> num_layers= 6
+2020-06-07 10:21:37,840:  >> dropout between layers= 0.4
+2020-06-07 10:21:38,241: view2:
+2020-06-07 10:21:38,242:  >> cell= GRU
+2020-06-07 10:21:38,242:  >> input_size= 64
+2020-06-07 10:21:38,242:  >> hidden_size= 512
+2020-06-07 10:21:38,242:  >> bidirectional= True
+2020-06-07 10:21:38,243:  >> num_layers= 2
+2020-06-07 10:21:38,244:  >> dropout between layers= 0.4
+2020-06-07 10:21:38,244:  >> num input embeddings= 45
+2020-06-07 10:21:38,322: Using module at optim.adam.Adam
+2020-06-07 10:21:38,323: Building optim from config
+2020-06-07 10:21:38,323:  >> lr= 0.001
+2020-06-07 10:21:38,323:  >> betas= (0.9, 0.999)
+2020-06-07 10:21:38,324:  >> eps= 1e-08
+2020-06-07 10:21:38,324:  >> weight_decay= 0
+2020-06-07 10:21:38,324:  >> amsgrad= False
+2020-06-07 10:21:38,324:  >> min_lr= 1e-07
+2020-06-07 10:21:38,325: Using module at sched.reduce_lr_on_plateau.ReduceLROnPlateau
+2020-06-07 10:21:38,326: Building sched from config
+2020-06-07 10:21:38,326:  >> optim= Adam
+2020-06-07 10:21:38,326:  >> decay lr by 0.1
+2020-06-07 10:21:38,327:  >> eval_fn= MultiViewAP
+2020-06-07 10:21:38,327:  >> patience=4
+2020-06-07 10:21:38,327:  >> revert=True
+2020-06-07 10:21:38,327: epoch=0.00 global_step=0 lr=0.001 start_iter=0
+2020-06-07 10:21:38,327: Iterating MultiViewDataset_IndividualWords (start_iter= 0)

@@ -4,7 +4,7 @@ import torch
 import torch.nn.functional as F
 
 import editdistance
-from weighted_edit_distance import weighted_edit_distance
+from .weighted_edit_distance import weighted_edit_distance
 
 class MultiViewTripletLoss:
 
@@ -81,7 +81,6 @@ class MultiViewTripletLoss:
               dist = editdistance.eval(seq_true, seq_false)
             else:
               dist = weighted_edit_distance(seq_true, seq_false)
-              print('FFFDF', dist)
             editdist_tens[true, false] = dist
       return editdist_tens
 
@@ -110,7 +109,7 @@ class MultiViewTripletLoss:
 
     # Most offending words per utt
     diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)
-    editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind)
+    editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind, use_subcosts=True)
     margin = self.margin_max * torch.clamp(editdist_tensor, min=self.threshold_max) / self.threshold_max
     obj0 = F.relu(margin + diff_k - same)
 
