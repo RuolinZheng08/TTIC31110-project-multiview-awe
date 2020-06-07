@@ -50,6 +50,7 @@ def tuneHyperparamsAndSave(config, small_grid_search=True):
       config.net_view1_dropout = dropout
       config.net_view2_dropout = dropout
       config.loss_margin = margin
+      config.global_global_step = 0
 
       log.info(f"Hyperparam tuning-------------------")
       log.info(f"optim_lr: {config.optim_lr}")
