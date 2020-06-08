@@ -9946,6 +9946,11 @@ Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 2020-06-07 06:57:21,502:   >> acoustic_ap=0.769 (10966 choose 2 pairs)
 2020-06-07 06:57:22,164: saved outputs to npz file successfully
 2020-06-07 06:57:22,165: (This was for init_lr=0.001, dropout=0.4, fixed_margin=0.4)
+
+
+
+
+
 2020-06-07 06:57:22,260: Hyperparam tuning-------------------
 2020-06-07 06:57:22,260: optim_lr: 0.001
 2020-06-07 06:57:22,260: dropout (for both): 0.4
