@@ -95,7 +95,6 @@ def train(config):
   with open(f"dev-embs-{config.optim_lr}-{config.net_view1_dropout}-{config.loss_margin}.txt", 'a') as out:
     out.write(str(dev_out)+'\n')
 
-  # commented out for now for tuning purposes!
-  # log.info("test score:")
-  # _, test_out = eval_fn(net, test_data)
-  # savez("save/test-embs", **test_out)
+  log.info("test score:")
+  _, test_out = eval_fn(net, test_data)
+  savez("save/test-embs", **test_out)

@@ -30,14 +30,14 @@ def tuneHyperparamsAndSave(config, small_grid_search=True):
     #   'loss_margin': [0.5]
     # }
     hyperparams = { # 4 combos, lr 0.0001 is too slow!!!
-      'optim_lr' : [0.001], # [0.001, 0.0001]
+      'optim_lr' : [0.0001], # [0.001, 0.0001]
       'dropout' : [0.4],
       'loss_margin': [0.5] # [0.4, 0.5]
     }
     # tally:
     # obj02 phones: 0.001-0.4-0.4/5 and 0.0001-0.4-0.4/5 have finished
     # obj02 chars: # least priority
-    # obj0 phones: 0.001-0.4-0.4 started; 0.001-0.4-0.5 in progress
+    # obj0 phones: 0.001-0.4-0.4 started; 0.001-0.4-0.5 finished; 0.0001-0.4-0.4 finished; 0.0001-0.4-0.5 in progress
     # obj0 chars: # least priority 0.001-0.4-0.4 started
   else:
     hyperparams = { # 40 combos
@@ -55,7 +55,7 @@ def tuneHyperparamsAndSave(config, small_grid_search=True):
       config.net_view1_dropout = dropout
       config.net_view2_dropout = dropout
       config.loss_margin = margin
-      config.global_step = 0
+      # config.global_step = 0
 
       log.info(f"Hyperparam tuning-------------------")
       log.info(f"optim_lr: {config.optim_lr}")
