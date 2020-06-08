@@ -14,6 +14,9 @@ class MultiViewTripletLoss:
     log.info(f" >> min_k= {min_k}")
     log.info(f" >> extra= {extra}")
     log.info(f" >> average= {average}")
+    log.info(" >> margin_max= 0.5")
+    log.info(" >> threshold_max= 9")
+    log.info(" >> using obj0")
 
     self.margin = margin
     self.k = k
@@ -109,8 +112,6 @@ class MultiViewTripletLoss:
     # TODO: tune hyperparams
     self.margin_max = 0.5
     self.threshold_max = 9
-    log.info(" >> margin_max= 0.5")
-    log.info(" >> threshold_max= 9")
 
     # Most offending words per utt
     diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)

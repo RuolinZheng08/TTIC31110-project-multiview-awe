@@ -2,3 +2,4 @@ __pycache__
 save/
 .DS_Store
 *.json
+log_file.txt
