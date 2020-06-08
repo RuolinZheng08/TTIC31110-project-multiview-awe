@@ -21,6 +21,7 @@ class MultiViewTripletLoss:
     self.extra = extra
     self.average = average
     self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    self.editdist_cache = {}
 
   def get_sims(self, x, y, inv, y_extra=None): # get_similarity
 
@@ -76,7 +77,13 @@ class MultiViewTripletLoss:
         for k_false in false_label_ind:
           for false, i_false in enumerate(k_false):
             seq_false = self.w2s[self.i2w[i_false.item()]]
-            dist = editdistance.eval(seq_true, seq_false)
+
+            key = tuple(sorted([i_true, i_false]))
+            if not key in self.editdist_cache:
+              dist = editdistance.eval(seq_true, seq_false)
+              self.editdist_cache[key] = dist
+            else:
+              dist = self.editdist_cache[key]
             editdist_tens[true, false] = dist
       return editdist_tens
 
@@ -102,6 +109,8 @@ class MultiViewTripletLoss:
     # TODO: tune hyperparams
     self.margin_max = 0.5
     self.threshold_max = 9
+    log.info(" >> margin_max= 0.5")
+    log.info(" >> threshold_max= 9")
 
     # Most offending words per utt
     diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)
