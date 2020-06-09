@@ -1,0 +1,134 @@
+2020-06-08 23:04:53,099: 
+
+Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2020-06-08 23:04:53,100: Using 1 GPU(s)
+2020-06-08 23:04:53,100: Machine: 0 / 1
+2020-06-08 23:04:53,113: Hyperparam tuning-------------------
+2020-06-08 23:04:53,113: optim_lr: 0.001
+2020-06-08 23:04:53,113: dropout (for both): 0.4
+2020-06-08 23:04:53,114: margin: 0.5
+2020-06-08 23:04:53,114: ------------------------------------
+2020-06-08 23:04:53,114: Calling main function: multiview_evaluator.evaluate
+2020-06-08 23:04:53,114: Using config file: eval_config.json
+2020-06-08 23:04:53,114: Using module at multiview_evaluator.evaluate
+2020-06-08 23:04:53,127: Using module at multiview_vocab.MultiViewVocab
+2020-06-08 23:04:53,136: Building vocab_data from config
+2020-06-08 23:04:53,527:  >> min_count= 0
+2020-06-08 23:04:53,527:  >> # words= 34323 (# removed= 0)
+2020-06-08 23:04:53,527:  >> # subwords= 45
+2020-06-08 23:04:53,527:     [laughter]= 1
+2020-06-08 23:04:53,527:     [noise]= 2
+2020-06-08 23:04:53,527:     [vocalized-noise]= 3
+2020-06-08 23:04:53,527:     aa= 4
+2020-06-08 23:04:53,527:     ae= 5
+2020-06-08 23:04:53,527:     ah= 6
+2020-06-08 23:04:53,527:     ao= 7
+2020-06-08 23:04:53,527:     aw= 8
+2020-06-08 23:04:53,527:     ax= 9
+2020-06-08 23:04:53,527:     ay= 10
+2020-06-08 23:04:53,527:     b= 11
+2020-06-08 23:04:53,528:     ch= 12
+2020-06-08 23:04:53,528:     d= 13
+2020-06-08 23:04:53,528:     dh= 14
+2020-06-08 23:04:53,528:     eh= 15
+2020-06-08 23:04:53,528:     el= 16
+2020-06-08 23:04:53,528:     en= 17
+2020-06-08 23:04:53,528:     er= 18
+2020-06-08 23:04:53,528:     ey= 19
+2020-06-08 23:04:53,528:     f= 20
+2020-06-08 23:04:53,528:     g= 21
+2020-06-08 23:04:53,528:     hh= 22
+2020-06-08 23:04:53,528:     ih= 23
+2020-06-08 23:04:53,528:     iy= 24
+2020-06-08 23:04:53,528:     jh= 25
+2020-06-08 23:04:53,528:     k= 26
+2020-06-08 23:04:53,528:     l= 27
+2020-06-08 23:04:53,528:     m= 28
+2020-06-08 23:04:53,528:     n= 29
+2020-06-08 23:04:53,528:     ng= 30
+2020-06-08 23:04:53,528:     ow= 31
+2020-06-08 23:04:53,528:     oy= 32
+2020-06-08 23:04:53,528:     p= 33
+2020-06-08 23:04:53,528:     r= 34
+2020-06-08 23:04:53,528:     s= 35
+2020-06-08 23:04:53,528:     sh= 36
+2020-06-08 23:04:53,528:     t= 37
+2020-06-08 23:04:53,528:     th= 38
+2020-06-08 23:04:53,529:     uh= 39
+2020-06-08 23:04:53,529:     uw= 40
+2020-06-08 23:04:53,529:     v= 41
+2020-06-08 23:04:53,529:     w= 42
+2020-06-08 23:04:53,529:     y= 43
+2020-06-08 23:04:53,529:     z= 44
+2020-06-08 23:04:53,529:     zh= 45
+2020-06-08 23:04:53,537: Using module at data.batch_samplers.BatchSampler
+2020-06-08 23:04:53,540: Building vocab_sampler from config
+2020-06-08 23:04:53,540:  >> # examples= 34323
+2020-06-08 23:04:53,540:  >> batch_size= 1000
+2020-06-08 23:04:53,540:  >> shuffle= False
+2020-06-08 23:04:53,545:  >> BatchSampler; 35 batches
+2020-06-08 23:04:53,545: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-08 23:04:54,084: Building dev_data from config
+2020-06-08 23:05:00,143:  >> feats: loading data/fbank.dev.hdf5
+2020-06-08 23:05:00,144:  >> align: loading data/align-small.dev.hdf5
+2020-06-08 23:05:00,144:  >> stack= False
+2020-06-08 23:05:00,144:  >> seg_durs= (1, None)
+2020-06-08 23:05:00,144:  >> # words= 10966 (# ignored= 0)
+2020-06-08 23:05:00,144:  >> input_feat_dim= 108
+2020-06-08 23:05:00,144:  >> input_num_subwords= 45
+2020-06-08 23:05:00,145: Using module at data.batch_samplers.BatchSampler
+2020-06-08 23:05:00,145: Building dev_sampler from config
+2020-06-08 23:05:00,145:  >> # examples= 10966
+2020-06-08 23:05:00,145:  >> batch_size= 256
+2020-06-08 23:05:00,145:  >> shuffle= False
+2020-06-08 23:05:00,149:  >> BatchSampler; 43 batches
+2020-06-08 23:05:00,149: Using module at multiview_dataset.MultiViewDataset_IndividualWords
+2020-06-08 23:05:00,149: Building test_data from config
+2020-06-08 23:05:05,294:  >> feats: loading data/fbank.test.hdf5
+2020-06-08 23:05:05,294:  >> align: loading data/align-small.test.hdf5
+2020-06-08 23:05:05,294:  >> stack= False
+2020-06-08 23:05:05,294:  >> seg_durs= (1, None)
+2020-06-08 23:05:05,294:  >> # words= 11024 (# ignored= 0)
+2020-06-08 23:05:05,294:  >> input_feat_dim= 108
+2020-06-08 23:05:05,295:  >> input_num_subwords= 45
+2020-06-08 23:05:05,295: Using module at data.batch_samplers.BatchSampler
+2020-06-08 23:05:05,295: Building test_sampler from config
+2020-06-08 23:05:05,295:  >> # examples= 11024
+2020-06-08 23:05:05,296:  >> batch_size= 256
+2020-06-08 23:05:05,296:  >> shuffle= False
+2020-06-08 23:05:05,300:  >> BatchSampler; 44 batches
+2020-06-08 23:05:05,300: Using module at metric.multiview_ap.MultiViewAP
+2020-06-08 23:05:08,239: Building eval from config
+2020-06-08 23:05:08,240:  >> acoustic_ap= True
+2020-06-08 23:05:08,240:  >> crossview_ap= True
+2020-06-08 23:05:08,240:  >> full_vocab= False
+2020-06-08 23:05:08,240:  >> metric= crossview_ap
+2020-06-08 23:05:08,240:  >> mode= max
+2020-06-08 23:05:08,240: Using module at multiview_rnn.MultiViewRNN
+2020-06-08 23:05:08,423: Building net from config
+2020-06-08 23:05:08,425: view1:
+2020-06-08 23:05:08,426:  >> cell= GRU
+2020-06-08 23:05:08,426:  >> input_size= 108
+2020-06-08 23:05:08,426:  >> hidden_size= 512
+2020-06-08 23:05:08,426:  >> bidirectional= True
+2020-06-08 23:05:08,426:  >> num_layers= 6
+2020-06-08 23:05:08,426:  >> dropout between layers= 0.4
+2020-06-08 23:05:08,580: view2:
+2020-06-08 23:05:08,581:  >> cell= GRU
+2020-06-08 23:05:08,581:  >> input_size= 64
+2020-06-08 23:05:08,581:  >> hidden_size= 512
+2020-06-08 23:05:08,581:  >> bidirectional= True
+2020-06-08 23:05:08,581:  >> num_layers= 2
+2020-06-08 23:05:08,581:  >> dropout between layers= 0.4
+2020-06-08 23:05:08,581:  >> num input embeddings= 45
+2020-06-08 23:05:18,601: loaded save/MultiViewRNN.best.pth
+2020-06-08 23:05:18,602: note: relative to /scratch/vzhao/ttic31110-agwe
+2020-06-08 23:05:18,602: Evaluating best model on dev and test:
+2020-06-08 23:05:18,602: dev score:
+2020-06-08 23:06:34,577:   >> crossview_ap=0.730 (10966 x 3921 pairs)
+2020-06-08 23:07:23,706:   >> acoustic_ap=0.775 (10966 choose 2 pairs)
+2020-06-08 23:07:24,361: saved outputs to npz file successfully
+2020-06-08 23:07:24,361: test score:
+2020-06-08 23:08:30,294:   >> crossview_ap=0.775 (11024 x 3392 pairs)
+2020-06-08 23:09:17,755:   >> acoustic_ap=0.836 (11024 choose 2 pairs)
+2020-06-08 23:09:18,386: saved outputs to npz file successfully
