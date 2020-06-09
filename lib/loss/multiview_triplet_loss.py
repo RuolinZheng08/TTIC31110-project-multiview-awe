@@ -16,7 +16,7 @@ class MultiViewTripletLoss:
     log.info(f" >> average= {average}")
     log.info(" >> margin_max= 0.5")
     log.info(" >> threshold_max= 9")
-    log.info(" >> using obj0")
+    log.info(" >> using obj0+2")
 
     self.margin = margin
     self.k = k
@@ -124,12 +124,12 @@ class MultiViewTripletLoss:
     # obj1 = F.relu(self.margin + word_diff_k[inv] - same)
 
     # # Most offending utts per word
-    # utt_diff_k = torch.zeros(m, k, device=diff.device)
-    # for i in range(m):
-    #   utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
-    # obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
+    utt_diff_k = torch.zeros(m, k, device=diff.device)
+    for i in range(m):
+      utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
+    obj2 = F.relu(margin + utt_diff_k[inv] - same)
 
-    # loss = (obj0 + obj2).mean(1)
-    loss = obj0.mean(1)
+    loss = (obj0 + obj2).mean(1)
+    # loss = obj0.mean(1)
 
     return loss.mean() if self.average else loss.sum()
