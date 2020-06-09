@@ -32,7 +32,7 @@ def tuneHyperparamsAndSave(config, small_grid_search=True):
     hyperparams = { # 4 combos, lr 0.0001 is too slow!!!
       'optim_lr' : [0.001], # [0.001, 0.0001]
       'dropout' : [0.4],
-      'loss_margin': [0.5] # [0.4, 0.5]
+      'loss_margin': [0.4] # [0.4, 0.5]
     }
     # tally:
     # obj02 phones: 0.001-0.4-0.4/5 and 0.0001-0.4-0.4/5 have finished
