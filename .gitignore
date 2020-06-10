@@ -3,3 +3,4 @@ save/
 .DS_Store
 *.npz
 *.tsv
+.ipynb_checkpoints/
