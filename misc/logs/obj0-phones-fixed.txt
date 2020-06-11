@@ -7225,12 +7225,4 @@ Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 2020-06-08 08:14:53,052: note: relative to /scratch/vzhao/ttic31110-agwe
 2020-06-08 08:14:53,052: Reducing group lr from 1.0000000000000002e-07 to 1.0000000000000004e-08
 2020-06-08 08:14:53,053: best linked save/Adam.best.pth
-2020-06-08 08:14:53,095: Converged?= True
-2020-06-08 08:14:53,095: Evaluating best model on dev and test:
-2020-06-08 08:14:53,174: loaded save/MultiViewRNN.3900.pth
-2020-06-08 08:14:53,174: note: relative to /scratch/vzhao/ttic31110-agwe
-2020-06-08 08:14:53,174: dev score:
-2020-06-08 08:15:59,410:   >> crossview_ap=0.730 (10966 x 3921 pairs)
-2020-06-08 08:16:46,323:   >> acoustic_ap=0.775 (10966 choose 2 pairs)
-2020-06-08 08:16:46,959: saved outputs to npz file successfully
-2020-06-08 08:16:46,959: (This was for init_lr=0.001, dropout=0.4, fixed_margin=0.5)
+

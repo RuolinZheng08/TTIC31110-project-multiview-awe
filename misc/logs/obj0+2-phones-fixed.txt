@@ -5995,18 +5995,3 @@ Start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 2020-06-07 17:28:49,456:   >> acoustic_ap=0.785 (10966 choose 2 pairs)
 2020-06-07 17:28:49,458: best_so_far= 0.738 at 3237
 2020-06-07 17:28:49,458: Reverting to previous best
-2020-06-07 17:28:49,539: loaded save/MultiViewRNN.3237.pth
-2020-06-07 17:28:49,539: note: relative to /scratch/vzhao/ttic31110-agwe
-2020-06-07 17:28:49,613: loaded save/Adam.3237.pth
-2020-06-07 17:28:49,613: note: relative to /scratch/vzhao/ttic31110-agwe
-2020-06-07 17:28:49,613: Reducing group lr from 1.0000000000000002e-07 to 1.0000000000000004e-08
-2020-06-07 17:28:49,615: best linked save/Adam.best.pth
-2020-06-07 17:28:49,654: Converged?= True
-2020-06-07 17:28:49,654: Evaluating best model on dev and test:
-2020-06-07 17:28:49,727: loaded save/MultiViewRNN.3237.pth
-2020-06-07 17:28:49,727: note: relative to /scratch/vzhao/ttic31110-agwe
-2020-06-07 17:28:49,727: dev score:
-2020-06-07 17:29:54,576:   >> crossview_ap=0.738 (10966 x 3921 pairs)
-2020-06-07 17:30:41,584:   >> acoustic_ap=0.785 (10966 choose 2 pairs)
-2020-06-07 17:30:42,217: saved outputs to npz file successfully
-2020-06-07 17:30:42,217: (This was for init_lr=0.001, dropout=0.4, fixed_margin=0.5)
