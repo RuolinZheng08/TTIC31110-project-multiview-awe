@@ -4,4 +4,4 @@ echo HOSTNAME: $(hostname)
 
 export PYTHONPATH=src:lib
 
-lib/utils/main.py eval_config.json
+python3.7 lib/utils/main.py eval_config.json

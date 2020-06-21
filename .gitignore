@@ -4,3 +4,4 @@ save/
 *.npz
 *.tsv
 .ipynb_checkpoints/
+log_file.txt

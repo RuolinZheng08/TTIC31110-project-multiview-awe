@@ -1,3 +1,0 @@
-slurmstepd: Unable to create TMPDIR [/tmp/user/17580]: No such file or directory
-slurmstepd: Setting TMPDIR to /tmp
-slurmstepd: *** JOB 148580 ON gpu1 CANCELLED AT 2020-06-06T23:47:50 DUE TO TIME LIMIT ***
