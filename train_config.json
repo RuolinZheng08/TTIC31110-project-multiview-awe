@@ -25,6 +25,7 @@
     "loss_k": 16,
     "loss_margin": 0.5,
     "loss_min_k": 8,
+    "loss_objective": "obj0",
     "main_fn": "multiview_trainer.train",
     "net_fn": "multiview_rnn.MultiViewRNN",
     "net_proj": null,

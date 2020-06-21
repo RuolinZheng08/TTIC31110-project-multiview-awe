@@ -6,19 +6,21 @@ import torch.nn.functional as F
 
 class MultiViewTripletLoss:
 
-  def __init__(self, margin, k, min_k=None, extra=0, average=True):
+  def __init__(self, margin, k, min_k=None, extra=0, average=True, objective="obj0"):
 
     log.info(f" >> margin= {margin}")
     log.info(f" >> k= {k}")
     log.info(f" >> min_k= {min_k}")
     log.info(f" >> extra= {extra}")
     log.info(f" >> average= {average}")
+    log.info(f" >> objective= {objective}")
 
     self.margin = margin
     self.k = k
     self.min_k = min_k or k
     self.extra = extra
     self.average = average
+    self.objective = objective
 
   def get_sims(self, x, y, inv, y_extra=None): # get_similarity
 
@@ -85,9 +87,9 @@ class MultiViewTripletLoss:
     diff_k = self.get_topk(diff, k=k, dim=1)
     obj0 = F.relu(self.margin + diff_k - same)
 
-    # Most offending words per word
-    word_diff_k = self.get_topk(word_diff, k=k, dim=1)
-    obj1 = F.relu(self.margin + word_diff_k[inv] - same)
+    # # Most offending words per word; used in 2019 paper but not in our proj
+    # word_diff_k = self.get_topk(word_diff, k=k, dim=1)
+    # obj1 = F.relu(self.margin + word_diff_k[inv] - same)
 
     # Most offending utts per word
     utt_diff_k = torch.zeros(m, k, device=diff.device)
@@ -95,19 +97,10 @@ class MultiViewTripletLoss:
       utt_diff_k[i] = self.get_topk(diff.view(-1)[perms == i], k=k)
     obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
-    # # NOTE: this is modeled after obj1 but with x instead of y, so it might not be correct
-    # audio_diff = self.get_word_sims(x, y_extra=y_extra)
-    # audio_diff_k = self.get_topk(audio_diff, k=k, dim=1)
-    # obj3 = F.relu(self.margin + audio_diff_k[inv] - same)
-
-    # TODO (cost-sensitive margins): obj0, obj1, obj2, obj3, obj0+2, obj1+3, obj0+1+2+3
-    losses = {
-      'obj0+2': (obj0 + obj2).mean(1), 
-      # 'obj1+3': (obj1 + obj3).mean(1), # unsure
-      # 'obj_all': (obj0 + obj1 + obj2 + obj3).mean(1) # unsure
-    }
-
-    # loss = (obj0 + obj1 + obj2).mean(1) # 1 is just the dim -- this is default with margin=0.5
-    loss = obj0.mean(1) #losses['obj0+2']
+    loss = obj0.mean(1)
+    if self.objective == "obj0":
+      loss = obj0.mean(1)
+    elif self.objective == "obj0+2":
+      loss = (obj0 + obj2).mean(1)
 
     return loss.mean() if self.average else loss.sum()
