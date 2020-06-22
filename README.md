@@ -4,9 +4,9 @@
 
 Choose `Color by: suffix` to see words ending in "ing" colored in blue, words ending in "ly" colored in pink, and words ending in "tion" colored in red in 3D.
 
-![](https://github.com/RuolinZheng08/phonetic-acoustic-word-embeddings/tree/master/misc/suffix.gif)
+![Color by Suffix](https://github.com/RuolinZheng08/phonetic-acoustic-word-embeddings/blob/master/misc/suffix.gif)
 
-![](https://github.com/RuolinZheng08/phonetic-acoustic-word-embeddings/tree/master/misc/demo.gif)
+![Demo](https://github.com/RuolinZheng08/phonetic-acoustic-word-embeddings/blob/master/misc/demo.gif)
 
 This recipe trains acoustic word embeddings (AWEs) and acoustically grounded word embeddings (AGWEs) on paired data
 consisting of word labels (given by their character sequences) and spoken word segments.
