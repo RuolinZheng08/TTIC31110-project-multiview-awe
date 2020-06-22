@@ -130,7 +130,7 @@ class MultiViewTripletLoss:
     # Most offending utts per word
     utt_diff_k = torch.zeros(m, k, device=diff.device)
     for i in range(m):
-      utt_diff_k[i] = self.get_topk(diff.view(-1)[perms == i], k=k)
+      utt_diff_k[i], _ = self.get_topk(diff.view(-1)[perms == i], k=k)
     obj2 = F.relu(self.margin + utt_diff_k[inv] - same)
 
     loss = obj0.mean(1)
