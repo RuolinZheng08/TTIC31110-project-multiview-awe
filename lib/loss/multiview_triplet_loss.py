@@ -3,17 +3,23 @@ import logging as log
 import torch
 import torch.nn.functional as F
 
+import editdistance
+from .weighted_edit_distance import weighted_edit_distance
 
 class MultiViewTripletLoss:
 
-  def __init__(self, margin, k, min_k=None, extra=0, average=True, objective="obj0"):
+  def __init__(self, margin, k, max_margin, max_threshold, min_k=None, extra=0, 
+  average=True, objective="obj0", edit_distance=None):
 
     log.info(f" >> margin= {margin}")
     log.info(f" >> k= {k}")
+    log.info(f" >> max_margin= {max_margin}")
+    log.info(f" >> max_threshold= {max_threshold}")
     log.info(f" >> min_k= {min_k}")
     log.info(f" >> extra= {extra}")
     log.info(f" >> average= {average}")
     log.info(f" >> objective= {objective}")
+    log.info(f" >> edit_distance= {edit_distance}")
 
     self.margin = margin
     self.k = k
@@ -21,6 +27,13 @@ class MultiViewTripletLoss:
     self.extra = extra
     self.average = average
     self.objective = objective
+
+    # cost-sensitive margin with edit distance
+    self.edit_distance = edit_distance
+    self.max_margin = max_margin
+    self.max_threshold = max_threshold
+
+    self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
   def get_sims(self, x, y, inv, y_extra=None): # get_similarity
 
@@ -62,7 +75,21 @@ class MultiViewTripletLoss:
 
   def get_topk(self, x, k, dim=0):
 
-    return x.topk(min(k, x.shape[dim]), dim=dim)[0] # torch fn that gets k biggest elts or something like that
+    return x.topk(min(k, x.shape[dim]), dim=dim) # torch fn that gets k biggest elts or something like that
+
+  def get_editdist_tensor(self, true_label_ind, false_label_ind, eval_edit_dist_fn=editdistance.eval):
+    # true_label_ind (batch_size, 1), false_label_ind (batch_size, k)
+    # returns a tensor the same dimension as false_label_ind, i.e. (batch_size, k)
+    # TODO: optimize tensor look up and check if it's correct
+      editdist_tens = torch.empty(false_label_ind.shape, device=self.device)
+      for true, i_true in enumerate(true_label_ind):
+        seq_true = self.w2s[self.i2w[i_true.item()]]
+        for k_false in false_label_ind:
+          for false, i_false in enumerate(k_false):
+            seq_false = self.w2s[self.i2w[i_false.item()]]
+            dist = eval_edit_dist_fn(seq_true, seq_false)
+            editdist_tens[true, false] = dist
+      return editdist_tens
 
   def __call__(self, x, y, inv, y_extra=None):
 
@@ -84,8 +111,17 @@ class MultiViewTripletLoss:
     # The 1 in front cancels out with the diff dis term.
 
     # Most offending words per utt
-    diff_k = self.get_topk(diff, k=k, dim=1)
-    obj0 = F.relu(self.margin + diff_k - same)
+    diff_k, diff_k_ind = self.get_topk(diff, k=k, dim=1) # diff_k has dim (batch_size, k)
+    if self.edit_distance is None:
+      obj0 = F.relu(self.margin + diff_k - same)
+    elif self.edit_distance == "edit_distance":
+      editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind)
+      margin = self.max_margin * torch.clamp(editdist_tensor, min=self.max_threshold) / self.max_threshold
+      obj0 = F.relu(margin + diff_k - same)
+    elif self.edit_distance == "weighted_edit_distance":
+      editdist_tensor = self.get_editdist_tensor(inv, diff_k_ind, eval_edit_dist_fn=weighted_edit_distance)
+      margin = self.max_margin * torch.clamp(editdist_tensor, min=self.max_threshold) / self.max_threshold
+      obj0 = F.relu(margin + diff_k - same)
 
     # # Most offending words per word; used in 2019 paper but not in our proj
     # word_diff_k = self.get_topk(word_diff, k=k, dim=1)
