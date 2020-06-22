@@ -2,7 +2,7 @@
 
 [TensorFlow Projector Demo](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/RuolinZheng08/ce93900f4876b63f598becfdc696f190/raw/073a0d87d441c7a58d34d7f21c8fc3c36b4e360e/projector-config.json)
 
-Choose `colorBy: suffix` to see words ending in "ing" colored in blue, words ending in "ly" colored in pink, and words ending in "tion" colored in red in 3D.
+Choose `Color by: suffix` to see words ending in "ing" colored in blue, words ending in "ly" colored in pink, and words ending in "tion" colored in red in 3D.
 
 ![](https://github.com/RuolinZheng08/phonetic-acoustic-word-embeddings/tree/master/misc/suffix.gif)
 
